@@ -1,0 +1,1113 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+dpkg-preconfigure: unable to re-open stdin: No such file or directory
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
++++ dirname -- ./install.sh
+++ cd -- .
+++ pwd
++ BASEDIR=/home/ubuntu/mini_pupper_bsp/FuelGauge
++ sudo cp /home/ubuntu/mini_pupper_bsp/FuelGauge/battery_monitor /usr/bin/
++ sudo cp /home/ubuntu/mini_pupper_bsp/FuelGauge/battery_monitor.service /lib/systemd/system/
++ sudo systemctl enable battery_monitor.service
+Created symlink /etc/systemd/system/sysinit.target.wants/battery_monitor.service → /lib/systemd/system/battery_monitor.service.
++ sudo cp 20auto-upgrades /etc/apt/apt.conf.d/
++ sudo apt-get remove -y ubuntu-release-upgrader-core
++ sudo chmod 440 sudoers
++ sudo cp sudoers /etc/
++ sudo cp rc.local /etc/
++ sudo cp rc-local.service /lib/systemd/system/
++ sudo systemctl enable rc-local
+Created symlink /etc/systemd/system/rc.local.service → /lib/systemd/system/rc-local.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/rc-local.service → /lib/systemd/system/rc-local.service.
++++ dirname -- ./install.sh
+++ cd -- .
+++ pwd
++ BASEDIR=/home/ubuntu/mini_pupper_bsp/esp32_proxy
++ cd /home/ubuntu/mini_pupper_bsp/esp32_proxy
++ make clean
++ make
++ sudo cp esp32-proxy /var/lib/mini_pupper_bsp/
++ sudo cp esp32-proxy.service /lib/systemd/system/
++ sudo systemctl enable esp32-proxy.service
+Created symlink /etc/systemd/system/sysinit.target.wants/esp32-proxy.service → /lib/systemd/system/esp32-proxy.service.
+--2023-08-20 08:57:49--  https://bootstrap.pypa.io/get-pip.py
+Resolving bootstrap.pypa.io (bootstrap.pypa.io)... 199.232.168.175, 2a04:4e42:6a::175
+Connecting to bootstrap.pypa.io (bootstrap.pypa.io)|199.232.168.175|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2605506 (2.5M) [text/x-python]
+Saving to: ‘get-pip.py’
+
+     0K .......... .......... .......... .......... ..........  1% 1.33M 2s
+    50K .......... .......... .......... .......... ..........  3% 1.70M 2s
+   100K .......... .......... .......... .......... ..........  5% 2.15M 1s
+   150K .......... .......... .......... .......... ..........  7% 1.89M 1s
+   200K .......... .......... .......... .......... ..........  9% 2.41M 1s
+   250K .......... .......... .......... .......... .......... 11% 1.37M 1s
+   300K .......... .......... .......... .......... .......... 13% 1.23M 1s
+   350K .......... .......... .......... .......... .......... 15% 1.09M 1s
+   400K .......... .......... .......... .......... .......... 17% 3.01M 1s
+   450K .......... .......... .......... .......... .......... 19% 2.30M 1s
+   500K .......... .......... .......... .......... .......... 21% 4.20M 1s
+   550K .......... .......... .......... .......... .......... 23% 1.49M 1s
+   600K .......... .......... .......... .......... .......... 25% 1.84M 1s
+   650K .......... .......... .......... .......... .......... 27% 3.41M 1s
+   700K .......... .......... .......... .......... .......... 29% 4.30M 1s
+   750K .......... .......... .......... .......... .......... 31% 4.88M 1s
+   800K .......... .......... .......... .......... .......... 33% 3.11M 1s
+   850K .......... .......... .......... .......... .......... 35% 2.78M 1s
+   900K .......... .......... .......... .......... .......... 37% 2.44M 1s
+   950K .......... .......... .......... .......... .......... 39% 2.17M 1s
+  1000K .......... .......... .......... .......... .......... 41% 1.92M 1s
+  1050K .......... .......... .......... .......... .......... 43% 3.02M 1s
+  1100K .......... .......... .......... .......... .......... 45% 4.81M 1s
+  1150K .......... .......... .......... .......... .......... 47% 4.70M 1s
+  1200K .......... .......... .......... .......... .......... 49% 2.62M 1s
+  1250K .......... .......... .......... .......... .......... 51% 2.27M 1s
+  1300K .......... .......... .......... .......... .......... 53% 3.42M 1s
+  1350K .......... .......... .......... .......... .......... 55% 3.34M 0s
+  1400K .......... .......... .......... .......... .......... 56% 3.80M 0s
+  1450K .......... .......... .......... .......... .......... 58% 3.45M 0s
+  1500K .......... .......... .......... .......... .......... 60% 1.30M 0s
+  1550K .......... .......... .......... .......... .......... 62% 2.44M 0s
+  1600K .......... .......... .......... .......... .......... 64% 4.13M 0s
+  1650K .......... .......... .......... .......... .......... 66% 2.61M 0s
+  1700K .......... .......... .......... .......... .......... 68% 1.89M 0s
+  1750K .......... .......... .......... .......... .......... 70% 6.16M 0s
+  1800K .......... .......... .......... .......... .......... 72% 5.64M 0s
+  1850K .......... .......... .......... .......... .......... 74% 3.06M 0s
+  1900K .......... .......... .......... .......... .......... 76% 1.55M 0s
+  1950K .......... .......... .......... .......... .......... 78% 8.11M 0s
+  2000K .......... .......... .......... .......... .......... 80% 3.99M 0s
+  2050K .......... .......... .......... .......... .......... 82% 2.82M 0s
+  2100K .......... .......... .......... .......... .......... 84% 2.90M 0s
+  2150K .......... .......... .......... .......... .......... 86% 5.45M 0s
+  2200K .......... .......... .......... .......... .......... 88%  924K 0s
+  2250K .......... .......... .......... .......... .......... 90% 2.97M 0s
+  2300K .......... .......... .......... .......... .......... 92% 3.18M 0s
+  2350K .......... .......... .......... .......... .......... 94% 4.09M 0s
+  2400K .......... .......... .......... .......... .......... 96% 4.72M 0s
+  2450K .......... .......... .......... .......... .......... 98% 5.03M 0s
+  2500K .......... .......... .......... .......... ....      100% 2.68M=1.0s
+
+2023-08-20 08:57:50 (2.47 MB/s) - ‘get-pip.py’ saved [2605506/2605506]
+
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+dt-blob-cam1.dts:7.25-12.15: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_config/pin@default: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:13.21-71: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_config/pin@p2: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:14.21-71: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_config/pin@p3: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:15.21-73: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_config/pin@p5: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:16.21-100: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_config/pin@p6: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:17.21-101: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_config/pin@p14: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:18.21-98: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_config/pin@p15: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:19.21-94: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_config/pin@p16: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:20.21-77: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_config/pin@p27: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:21.21-102: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_config/pin@p40: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:22.21-102: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_config/pin@p45: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:23.21-77: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_config/pin@p46: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:24.21-77: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_config/pin@p47: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:25.21-101: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_config/pin@p48: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:26.21-101: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_config/pin@p49: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:27.21-101: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_config/pin@p50: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:28.21-101: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_config/pin@p51: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:29.21-101: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_config/pin@p52: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:30.21-101: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_config/pin@p53: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:34.46-37.15: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_defines/pin_define@HDMI_CONTROL_ATTACHED: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:38.36-41.15: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_defines/pin_define@NUM_CAMERAS: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:42.45-45.15: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_defines/pin_define@CAMERA_0_UNICAM_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:46.42-49.15: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_defines/pin_define@CAMERA_0_I2C_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:50.41-53.15: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_defines/pin_define@CAMERA_0_SDA_PIN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:54.41-57.15: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_defines/pin_define@CAMERA_0_SCL_PIN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:58.42-61.15: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_defines/pin_define@CAMERA_0_SHUTDOWN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:62.37-65.15: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_defines/pin_define@CAMERA_0_LED: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:66.39-68.15: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_defines/pin_define@FLASH_0_ENABLE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:69.42-71.15: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_defines/pin_define@FLASH_0_INDICATOR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:72.39-74.15: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_defines/pin_define@FLASH_1_ENABLE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:75.42-77.15: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_defines/pin_define@FLASH_1_INDICATOR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:78.34-80.15: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_defines/pin_define@POWER_LOW: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:81.43-84.15: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_defines/pin_define@LEDS_DISK_ACTIVITY: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:85.32-88.15: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_defines/pin_define@LAN_RUN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:89.33-91.15: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_defines/pin_define@SMPS_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:92.33-94.15: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_defines/pin_define@SMPS_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:95.32-97.15: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_defines/pin_define@ETH_CLK: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:98.38-100.15: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_defines/pin_define@USB_LIMIT_1A2: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:101.36-103.15: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_defines/pin_define@SIO_1V8_SEL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:104.29-107.15: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_defines/pin_define@PWML: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:108.29-111.15: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_defines/pin_define@PWMR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:112.34-115.15: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_defines/pin_define@SAFE_MODE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:116.39-119.15: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_defines/pin_define@SD_CARD_DETECT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:120.31-122.15: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_defines/pin_define@ID_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:123.31-125.15: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_defines/pin_define@ID_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:126.41-129.15: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_defines/pin_define@DISPLAY_I2C_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:130.36-133.15: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_defines/pin_define@DISPLAY_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:134.36-137.15: Warning (unit_address_vs_reg): /videocore/pins_rev1/pin_defines/pin_define@DISPLAY_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:143.25-148.15: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_config/pin@default: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:149.21-71: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_config/pin@p0: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:150.21-71: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_config/pin@p1: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:151.21-73: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_config/pin@p5: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:152.21-99: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_config/pin@p6: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:153.21-101: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_config/pin@p14: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:154.21-98: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_config/pin@p15: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:155.21-96: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_config/pin@p16: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:156.21-77: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_config/pin@p21: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:157.21-102: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_config/pin@p40: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:158.21-102: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_config/pin@p45: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:159.21-77: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_config/pin@p46: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:160.21-77: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_config/pin@p47: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:161.21-101: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_config/pin@p48: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:162.21-101: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_config/pin@p49: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:163.21-101: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_config/pin@p50: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:164.21-101: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_config/pin@p51: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:165.21-101: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_config/pin@p52: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:166.21-101: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_config/pin@p53: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:170.46-173.15: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_defines/pin_define@HDMI_CONTROL_ATTACHED: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:174.36-177.15: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_defines/pin_define@NUM_CAMERAS: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:178.42-181.15: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_defines/pin_define@CAMERA_0_I2C_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:182.41-185.15: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_defines/pin_define@CAMERA_0_SDA_PIN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:186.41-189.15: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_defines/pin_define@CAMERA_0_SCL_PIN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:190.42-193.15: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_defines/pin_define@CAMERA_0_SHUTDOWN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:194.45-197.15: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_defines/pin_define@CAMERA_0_UNICAM_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:198.37-201.15: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_defines/pin_define@CAMERA_0_LED: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:202.39-204.15: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_defines/pin_define@FLASH_0_ENABLE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:205.42-207.15: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_defines/pin_define@FLASH_0_INDICATOR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:208.39-210.15: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_defines/pin_define@FLASH_1_ENABLE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:211.42-213.15: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_defines/pin_define@FLASH_1_INDICATOR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:214.34-216.15: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_defines/pin_define@POWER_LOW: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:217.43-220.15: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_defines/pin_define@LEDS_DISK_ACTIVITY: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:221.32-224.15: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_defines/pin_define@LAN_RUN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:225.33-227.15: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_defines/pin_define@SMPS_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:228.33-230.15: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_defines/pin_define@SMPS_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:231.32-233.15: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_defines/pin_define@ETH_CLK: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:234.38-236.15: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_defines/pin_define@USB_LIMIT_1A2: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:237.36-239.15: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_defines/pin_define@SIO_1V8_SEL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:240.29-243.15: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_defines/pin_define@PWML: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:244.29-247.15: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_defines/pin_define@PWMR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:248.34-251.15: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_defines/pin_define@SAFE_MODE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:252.39-255.15: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_defines/pin_define@SD_CARD_DETECT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:256.31-258.15: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_defines/pin_define@ID_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:259.31-261.15: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_defines/pin_define@ID_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:262.41-265.15: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_defines/pin_define@DISPLAY_I2C_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:266.36-269.15: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_defines/pin_define@DISPLAY_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:270.36-273.15: Warning (unit_address_vs_reg): /videocore/pins_rev2/pin_defines/pin_define@DISPLAY_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:279.25-284.15: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_config/pin@default: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:285.21-101: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_config/pin@p14: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:286.21-98: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_config/pin@p15: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:287.21-75: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_config/pin@p28: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:288.21-75: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_config/pin@p29: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:289.21-99: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_config/pin@p31: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:290.21-73: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_config/pin@p32: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:291.21-99: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_config/pin@p35: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:292.21-77: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_config/pin@p38: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:293.21-102: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_config/pin@p40: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:294.21-77: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_config/pin@p41: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:295.21-73: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_config/pin@p44: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:296.21-102: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_config/pin@p45: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:297.21-99: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_config/pin@p46: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:298.21-73: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_config/pin@p47: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:299.21-101: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_config/pin@p48: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:300.21-101: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_config/pin@p49: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:301.21-101: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_config/pin@p50: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:302.21-101: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_config/pin@p51: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:303.21-101: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_config/pin@p52: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:304.21-101: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_config/pin@p53: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:308.46-311.15: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_defines/pin_define@HDMI_CONTROL_ATTACHED: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:312.36-315.15: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_defines/pin_define@NUM_CAMERAS: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:316.42-319.15: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_defines/pin_define@CAMERA_0_I2C_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:320.41-323.15: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_defines/pin_define@CAMERA_0_SDA_PIN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:324.41-327.15: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_defines/pin_define@CAMERA_0_SCL_PIN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:328.42-331.15: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_defines/pin_define@CAMERA_0_SHUTDOWN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:332.45-335.15: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_defines/pin_define@CAMERA_0_UNICAM_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:336.37-339.15: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_defines/pin_define@CAMERA_0_LED: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:340.39-342.15: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_defines/pin_define@FLASH_0_ENABLE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:343.42-345.15: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_defines/pin_define@FLASH_0_INDICATOR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:346.39-348.15: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_defines/pin_define@FLASH_1_ENABLE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:349.42-351.15: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_defines/pin_define@FLASH_1_INDICATOR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:352.34-355.15: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_defines/pin_define@POWER_LOW: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:356.43-359.15: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_defines/pin_define@LEDS_DISK_ACTIVITY: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:360.32-363.15: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_defines/pin_define@LAN_RUN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:364.33-366.15: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_defines/pin_define@SMPS_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:367.33-369.15: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_defines/pin_define@SMPS_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:370.32-373.15: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_defines/pin_define@ETH_CLK: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:374.38-376.15: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_defines/pin_define@USB_LIMIT_1A2: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:377.36-380.15: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_defines/pin_define@SIO_1V8_SEL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:381.29-384.15: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_defines/pin_define@PWML: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:385.29-388.15: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_defines/pin_define@PWMR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:389.34-392.15: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_defines/pin_define@SAFE_MODE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:393.39-395.15: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_defines/pin_define@SD_CARD_DETECT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:396.31-399.15: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_defines/pin_define@ID_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:400.31-403.15: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_defines/pin_define@ID_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:404.41-407.15: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_defines/pin_define@DISPLAY_I2C_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:408.36-411.15: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_defines/pin_define@DISPLAY_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:412.36-415.15: Warning (unit_address_vs_reg): /videocore/pins_bplus1/pin_defines/pin_define@DISPLAY_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:421.25-426.15: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_config/pin@default: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:427.21-101: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_config/pin@p14: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:428.21-98: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_config/pin@p15: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:429.21-75: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_config/pin@p28: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:430.21-75: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_config/pin@p29: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:431.21-100: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_config/pin@p31: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:432.21-73: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_config/pin@p32: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:433.21-99: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_config/pin@p35: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:434.21-77: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_config/pin@p38: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:435.21-102: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_config/pin@p40: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:436.21-77: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_config/pin@p41: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:437.21-73: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_config/pin@p44: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:438.21-102: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_config/pin@p45: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:439.21-99: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_config/pin@p46: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:440.21-73: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_config/pin@p47: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:441.21-101: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_config/pin@p48: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:442.21-101: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_config/pin@p49: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:443.21-101: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_config/pin@p50: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:444.21-101: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_config/pin@p51: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:445.21-101: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_config/pin@p52: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:446.21-101: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_config/pin@p53: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:450.46-453.15: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_defines/pin_define@HDMI_CONTROL_ATTACHED: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:454.36-457.15: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_defines/pin_define@NUM_CAMERAS: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:458.42-461.15: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_defines/pin_define@CAMERA_0_I2C_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:462.41-465.15: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_defines/pin_define@CAMERA_0_SDA_PIN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:466.41-469.15: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_defines/pin_define@CAMERA_0_SCL_PIN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:470.42-473.15: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_defines/pin_define@CAMERA_0_SHUTDOWN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:474.45-477.15: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_defines/pin_define@CAMERA_0_UNICAM_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:478.37-481.15: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_defines/pin_define@CAMERA_0_LED: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:482.39-484.15: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_defines/pin_define@FLASH_0_ENABLE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:485.42-487.15: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_defines/pin_define@FLASH_0_INDICATOR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:488.39-490.15: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_defines/pin_define@FLASH_1_ENABLE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:491.42-493.15: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_defines/pin_define@FLASH_1_INDICATOR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:494.34-497.15: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_defines/pin_define@POWER_LOW: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:498.43-501.15: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_defines/pin_define@LEDS_DISK_ACTIVITY: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:502.32-505.15: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_defines/pin_define@LAN_RUN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:506.33-508.15: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_defines/pin_define@SMPS_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:509.33-511.15: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_defines/pin_define@SMPS_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:512.32-515.15: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_defines/pin_define@ETH_CLK: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:516.38-519.15: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_defines/pin_define@USB_LIMIT_1A2: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:520.36-522.15: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_defines/pin_define@SIO_1V8_SEL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:523.29-526.15: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_defines/pin_define@PWML: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:527.29-530.15: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_defines/pin_define@PWMR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:531.34-534.15: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_defines/pin_define@SAFE_MODE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:535.39-537.15: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_defines/pin_define@SD_CARD_DETECT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:538.31-541.15: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_defines/pin_define@ID_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:542.31-545.15: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_defines/pin_define@ID_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:546.41-549.15: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_defines/pin_define@DISPLAY_I2C_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:550.36-553.15: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_defines/pin_define@DISPLAY_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:554.36-557.15: Warning (unit_address_vs_reg): /videocore/pins_bplus2/pin_defines/pin_define@DISPLAY_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:563.25-568.15: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_config/pin@default: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:569.21-101: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_config/pin@p14: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:570.21-98: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_config/pin@p15: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:571.21-75: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_config/pin@p28: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:572.21-75: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_config/pin@p29: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:573.21-73: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_config/pin@p32: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:574.21-99: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_config/pin@p35: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:575.21-77: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_config/pin@p38: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:576.21-102: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_config/pin@p40: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:577.21-77: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_config/pin@p41: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:578.21-102: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_config/pin@p45: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:579.21-99: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_config/pin@p46: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:580.21-73: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_config/pin@p47: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:581.21-101: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_config/pin@p48: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:582.21-101: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_config/pin@p49: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:583.21-101: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_config/pin@p50: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:584.21-101: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_config/pin@p51: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:585.21-101: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_config/pin@p52: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:586.21-101: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_config/pin@p53: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:590.46-593.15: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_defines/pin_define@HDMI_CONTROL_ATTACHED: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:594.36-597.15: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_defines/pin_define@NUM_CAMERAS: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:598.42-601.15: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_defines/pin_define@CAMERA_0_I2C_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:602.41-605.15: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_defines/pin_define@CAMERA_0_SDA_PIN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:606.41-609.15: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_defines/pin_define@CAMERA_0_SCL_PIN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:610.42-613.15: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_defines/pin_define@CAMERA_0_SHUTDOWN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:614.45-617.15: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_defines/pin_define@CAMERA_0_UNICAM_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:618.37-621.15: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_defines/pin_define@CAMERA_0_LED: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:622.39-624.15: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_defines/pin_define@FLASH_0_ENABLE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:625.42-627.15: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_defines/pin_define@FLASH_0_INDICATOR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:628.39-630.15: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_defines/pin_define@FLASH_1_ENABLE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:631.42-633.15: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_defines/pin_define@FLASH_1_INDICATOR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:634.34-637.15: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_defines/pin_define@POWER_LOW: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:638.43-641.15: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_defines/pin_define@LEDS_DISK_ACTIVITY: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:642.32-644.15: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_defines/pin_define@LAN_RUN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:645.33-647.15: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_defines/pin_define@SMPS_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:648.33-650.15: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_defines/pin_define@SMPS_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:651.32-653.15: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_defines/pin_define@ETH_CLK: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:654.38-657.15: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_defines/pin_define@USB_LIMIT_1A2: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:658.36-660.15: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_defines/pin_define@SIO_1V8_SEL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:661.29-664.15: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_defines/pin_define@PWML: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:665.29-668.15: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_defines/pin_define@PWMR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:669.34-672.15: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_defines/pin_define@SAFE_MODE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:673.39-675.15: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_defines/pin_define@SD_CARD_DETECT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:676.31-679.15: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_defines/pin_define@ID_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:680.31-683.15: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_defines/pin_define@ID_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:684.41-687.15: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_defines/pin_define@DISPLAY_I2C_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:688.36-691.15: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_defines/pin_define@DISPLAY_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:692.36-695.15: Warning (unit_address_vs_reg): /videocore/pins_aplus/pin_defines/pin_define@DISPLAY_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:701.25-706.15: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_config/pin@default: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:707.21-101: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_config/pin@p14: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:708.21-98: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_config/pin@p15: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:709.21-75: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_config/pin@p28: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:710.21-75: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_config/pin@p29: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:711.21-100: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_config/pin@p31: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:712.21-73: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_config/pin@p32: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:713.21-99: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_config/pin@p35: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:714.21-77: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_config/pin@p38: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:715.21-102: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_config/pin@p40: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:716.21-77: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_config/pin@p41: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:717.21-73: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_config/pin@p44: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:718.21-102: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_config/pin@p45: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:719.21-99: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_config/pin@p46: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:720.21-73: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_config/pin@p47: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:721.21-101: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_config/pin@p48: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:722.21-101: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_config/pin@p49: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:723.21-101: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_config/pin@p50: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:724.21-101: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_config/pin@p51: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:725.21-101: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_config/pin@p52: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:726.21-101: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_config/pin@p53: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:730.46-733.15: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_defines/pin_define@HDMI_CONTROL_ATTACHED: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:734.36-737.15: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_defines/pin_define@NUM_CAMERAS: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:738.42-741.15: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_defines/pin_define@CAMERA_0_I2C_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:742.41-745.15: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_defines/pin_define@CAMERA_0_SDA_PIN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:746.41-749.15: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_defines/pin_define@CAMERA_0_SCL_PIN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:750.42-753.15: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_defines/pin_define@CAMERA_0_SHUTDOWN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:754.45-757.15: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_defines/pin_define@CAMERA_0_UNICAM_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:758.37-761.15: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_defines/pin_define@CAMERA_0_LED: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:762.39-764.15: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_defines/pin_define@FLASH_0_ENABLE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:765.42-767.15: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_defines/pin_define@FLASH_0_INDICATOR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:768.39-770.15: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_defines/pin_define@FLASH_1_ENABLE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:771.42-773.15: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_defines/pin_define@FLASH_1_INDICATOR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:774.34-777.15: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_defines/pin_define@POWER_LOW: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:778.43-781.15: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_defines/pin_define@LEDS_DISK_ACTIVITY: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:782.32-785.15: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_defines/pin_define@LAN_RUN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:786.33-789.15: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_defines/pin_define@SMPS_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:790.33-793.15: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_defines/pin_define@SMPS_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:794.32-797.15: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_defines/pin_define@ETH_CLK: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:798.38-801.15: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_defines/pin_define@USB_LIMIT_1A2: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:802.36-804.15: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_defines/pin_define@SIO_1V8_SEL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:805.29-808.15: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_defines/pin_define@PWML: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:809.29-812.15: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_defines/pin_define@PWMR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:813.34-816.15: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_defines/pin_define@SAFE_MODE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:817.39-819.15: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_defines/pin_define@SD_CARD_DETECT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:820.31-823.15: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_defines/pin_define@ID_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:824.31-827.15: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_defines/pin_define@ID_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:828.41-831.15: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_defines/pin_define@DISPLAY_I2C_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:832.36-835.15: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_defines/pin_define@DISPLAY_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:836.36-839.15: Warning (unit_address_vs_reg): /videocore/pins_2b1/pin_defines/pin_define@DISPLAY_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:845.25-850.15: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_config/pin@default: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:851.21-101: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_config/pin@p14: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:852.21-98: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_config/pin@p15: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:853.21-75: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_config/pin@p28: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:854.21-75: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_config/pin@p29: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:855.21-100: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_config/pin@p31: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:856.21-73: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_config/pin@p32: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:857.21-99: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_config/pin@p35: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:858.21-77: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_config/pin@p38: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:859.21-102: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_config/pin@p40: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:860.21-77: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_config/pin@p41: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:862.21-74: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_config/pin@p42: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:863.21-77: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_config/pin@p43: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:864.21-73: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_config/pin@p44: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:865.21-102: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_config/pin@p45: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:866.21-99: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_config/pin@p46: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:867.21-73: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_config/pin@p47: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:868.21-101: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_config/pin@p48: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:869.21-101: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_config/pin@p49: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:870.21-101: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_config/pin@p50: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:871.21-101: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_config/pin@p51: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:872.21-101: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_config/pin@p52: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:873.21-101: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_config/pin@p53: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:877.46-880.15: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_defines/pin_define@HDMI_CONTROL_ATTACHED: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:881.36-884.15: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_defines/pin_define@NUM_CAMERAS: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:885.42-888.15: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_defines/pin_define@CAMERA_0_I2C_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:889.41-892.15: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_defines/pin_define@CAMERA_0_SDA_PIN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:893.41-896.15: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_defines/pin_define@CAMERA_0_SCL_PIN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:897.42-900.15: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_defines/pin_define@CAMERA_0_SHUTDOWN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:901.45-904.15: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_defines/pin_define@CAMERA_0_UNICAM_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:905.37-908.15: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_defines/pin_define@CAMERA_0_LED: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:909.39-911.15: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_defines/pin_define@FLASH_0_ENABLE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:912.42-914.15: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_defines/pin_define@FLASH_0_INDICATOR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:915.39-917.15: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_defines/pin_define@FLASH_1_ENABLE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:918.42-920.15: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_defines/pin_define@FLASH_1_INDICATOR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:921.34-924.15: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_defines/pin_define@POWER_LOW: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:925.43-928.15: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_defines/pin_define@LEDS_DISK_ACTIVITY: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:929.32-932.15: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_defines/pin_define@LAN_RUN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:933.33-936.15: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_defines/pin_define@SMPS_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:937.33-940.15: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_defines/pin_define@SMPS_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:941.32-944.15: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_defines/pin_define@ETH_CLK: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:945.38-948.15: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_defines/pin_define@USB_LIMIT_1A2: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:949.36-951.15: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_defines/pin_define@SIO_1V8_SEL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:952.29-955.15: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_defines/pin_define@PWML: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:956.29-959.15: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_defines/pin_define@PWMR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:960.34-963.15: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_defines/pin_define@SAFE_MODE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:964.39-966.15: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_defines/pin_define@SD_CARD_DETECT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:967.31-970.15: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_defines/pin_define@ID_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:971.31-974.15: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_defines/pin_define@ID_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:975.41-978.15: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_defines/pin_define@DISPLAY_I2C_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:979.36-982.15: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_defines/pin_define@DISPLAY_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:983.36-986.15: Warning (unit_address_vs_reg): /videocore/pins_2b2/pin_defines/pin_define@DISPLAY_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:992.25-997.15: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_config/pin@default: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:998.21-101: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_config/pin@p14: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:999.21-101: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_config/pin@p15: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1000.21-101: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_config/pin@p34: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1001.21-101: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_config/pin@p35: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1002.21-101: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_config/pin@p36: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1003.21-101: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_config/pin@p37: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1004.21-101: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_config/pin@p38: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1005.21-101: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_config/pin@p39: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1006.21-102: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_config/pin@p40: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1007.21-102: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_config/pin@p41: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1008.21-73: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_config/pin@p42: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1009.21-73: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_config/pin@p43: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1010.21-75: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_config/pin@p44: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1011.21-75: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_config/pin@p45: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1012.21-73: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_config/pin@p47: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1013.21-101: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_config/pin@p48: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1014.21-101: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_config/pin@p49: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1015.21-101: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_config/pin@p50: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1016.21-101: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_config/pin@p51: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1017.21-101: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_config/pin@p52: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1018.21-101: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_config/pin@p53: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1019.22-75: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_config/pin@p128: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1020.22-75: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_config/pin@p129: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1021.22-75: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_config/pin@p130: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1022.22-102: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_config/pin@p131: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1023.22-100: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_config/pin@p132: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1024.22-75: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_config/pin@p133: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1025.22-75: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_config/pin@p134: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1026.22-100: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_config/pin@p135: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1030.46-1033.15: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_defines/pin_define@HDMI_CONTROL_ATTACHED: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1034.36-1037.15: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_defines/pin_define@NUM_CAMERAS: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1038.42-1041.15: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_defines/pin_define@CAMERA_0_I2C_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1042.41-1045.15: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_defines/pin_define@CAMERA_0_SDA_PIN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1046.41-1049.15: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_defines/pin_define@CAMERA_0_SCL_PIN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1050.42-1053.15: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_defines/pin_define@CAMERA_0_SHUTDOWN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1054.45-1057.15: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_defines/pin_define@CAMERA_0_UNICAM_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1058.37-1061.15: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_defines/pin_define@CAMERA_0_LED: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1062.39-1064.15: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_defines/pin_define@FLASH_0_ENABLE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1065.42-1067.15: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_defines/pin_define@FLASH_0_INDICATOR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1068.39-1070.15: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_defines/pin_define@FLASH_1_ENABLE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1071.42-1073.15: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_defines/pin_define@FLASH_1_INDICATOR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1074.34-1077.15: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_defines/pin_define@POWER_LOW: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1078.43-1081.15: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_defines/pin_define@LEDS_DISK_ACTIVITY: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1082.32-1085.15: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_defines/pin_define@LAN_RUN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1086.37-1089.15: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_defines/pin_define@LAN_RUN_BOOT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1090.30-1093.15: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_defines/pin_define@BT_ON: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1094.30-1097.15: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_defines/pin_define@WL_ON: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1098.33-1101.15: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_defines/pin_define@SMPS_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1102.33-1105.15: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_defines/pin_define@SMPS_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1106.32-1109.15: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_defines/pin_define@ETH_CLK: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1110.35-1113.15: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_defines/pin_define@WL_LPO_CLK: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1114.38-1116.15: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_defines/pin_define@USB_LIMIT_1A2: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1117.36-1119.15: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_defines/pin_define@SIO_1V8_SEL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1120.29-1123.15: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_defines/pin_define@PWML: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1124.29-1127.15: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_defines/pin_define@PWMR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1128.34-1130.15: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_defines/pin_define@SAFE_MODE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1131.39-1133.15: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_defines/pin_define@SD_CARD_DETECT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1134.31-1137.15: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_defines/pin_define@ID_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1138.31-1141.15: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_defines/pin_define@ID_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1142.41-1145.15: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_defines/pin_define@DISPLAY_I2C_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1146.36-1149.15: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_defines/pin_define@DISPLAY_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1150.36-1153.15: Warning (unit_address_vs_reg): /videocore/pins_3b1/pin_defines/pin_define@DISPLAY_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1159.25-1164.15: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_config/pin@default: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1165.21-101: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_config/pin@p14: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1166.21-101: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_config/pin@p15: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1167.21-101: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_config/pin@p34: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1168.21-101: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_config/pin@p35: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1169.21-101: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_config/pin@p36: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1170.21-101: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_config/pin@p37: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1171.21-101: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_config/pin@p38: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1172.21-101: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_config/pin@p39: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1173.21-102: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_config/pin@p40: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1174.21-102: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_config/pin@p41: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1175.21-73: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_config/pin@p42: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1176.21-73: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_config/pin@p43: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1177.21-75: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_config/pin@p44: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1178.21-75: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_config/pin@p45: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1179.21-75: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_config/pin@p46: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1180.21-75: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_config/pin@p47: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1181.21-101: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_config/pin@p48: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1182.21-101: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_config/pin@p49: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1183.21-101: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_config/pin@p50: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1184.21-101: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_config/pin@p51: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1185.21-101: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_config/pin@p52: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1186.21-101: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_config/pin@p53: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1187.22-75: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_config/pin@p128: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1188.22-75: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_config/pin@p129: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1189.22-75: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_config/pin@p130: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1190.22-101: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_config/pin@p131: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1191.22-100: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_config/pin@p132: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1192.22-75: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_config/pin@p133: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1193.22-75: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_config/pin@p134: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1194.22-100: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_config/pin@p135: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1198.46-1201.15: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_defines/pin_define@HDMI_CONTROL_ATTACHED: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1202.36-1205.15: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_defines/pin_define@NUM_CAMERAS: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1206.42-1209.15: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_defines/pin_define@CAMERA_0_I2C_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1210.41-1213.15: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_defines/pin_define@CAMERA_0_SDA_PIN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1214.41-1217.15: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_defines/pin_define@CAMERA_0_SCL_PIN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1218.42-1221.15: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_defines/pin_define@CAMERA_0_SHUTDOWN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1222.45-1225.15: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_defines/pin_define@CAMERA_0_UNICAM_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1226.37-1229.15: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_defines/pin_define@CAMERA_0_LED: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1230.39-1232.15: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_defines/pin_define@FLASH_0_ENABLE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1233.42-1235.15: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_defines/pin_define@FLASH_0_INDICATOR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1236.39-1238.15: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_defines/pin_define@FLASH_1_ENABLE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1239.42-1241.15: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_defines/pin_define@FLASH_1_INDICATOR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1242.34-1245.15: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_defines/pin_define@POWER_LOW: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1246.43-1249.15: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_defines/pin_define@LEDS_DISK_ACTIVITY: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1250.32-1253.15: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_defines/pin_define@LAN_RUN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1254.37-1257.15: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_defines/pin_define@LAN_RUN_BOOT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1258.30-1261.15: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_defines/pin_define@BT_ON: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1262.30-1265.15: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_defines/pin_define@WL_ON: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1266.33-1269.15: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_defines/pin_define@SMPS_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1270.33-1273.15: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_defines/pin_define@SMPS_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1274.32-1277.15: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_defines/pin_define@ETH_CLK: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1278.35-1281.15: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_defines/pin_define@WL_LPO_CLK: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1282.38-1284.15: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_defines/pin_define@USB_LIMIT_1A2: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1285.36-1287.15: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_defines/pin_define@SIO_1V8_SEL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1288.29-1291.15: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_defines/pin_define@PWML: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1292.29-1295.15: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_defines/pin_define@PWMR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1296.34-1298.15: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_defines/pin_define@SAFE_MODE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1299.39-1301.15: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_defines/pin_define@SD_CARD_DETECT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1302.31-1305.15: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_defines/pin_define@ID_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1306.31-1309.15: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_defines/pin_define@ID_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1310.41-1313.15: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_defines/pin_define@DISPLAY_I2C_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1314.36-1317.15: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_defines/pin_define@DISPLAY_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1318.36-1321.15: Warning (unit_address_vs_reg): /videocore/pins_3b2/pin_defines/pin_define@DISPLAY_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1327.25-1332.15: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_config/pin@default: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1333.21-101: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_config/pin@p14: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1334.21-101: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_config/pin@p15: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1335.21-99: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_config/pin@p28: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1336.21-74: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_config/pin@p29: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1337.21-101: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_config/pin@p34: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1338.21-101: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_config/pin@p35: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1339.21-101: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_config/pin@p36: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1340.21-101: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_config/pin@p37: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1341.21-101: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_config/pin@p38: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1342.21-101: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_config/pin@p39: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1343.21-102: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_config/pin@p40: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1344.21-102: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_config/pin@p41: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1345.21-73: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_config/pin@p42: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1346.21-73: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_config/pin@p43: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1347.21-75: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_config/pin@p44: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1348.21-75: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_config/pin@p45: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1349.21-75: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_config/pin@p46: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1350.21-75: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_config/pin@p47: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1351.21-101: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_config/pin@p48: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1352.21-101: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_config/pin@p49: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1353.21-101: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_config/pin@p50: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1354.21-101: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_config/pin@p51: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1355.21-101: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_config/pin@p52: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1356.21-101: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_config/pin@p53: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1357.22-75: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_config/pin@p128: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1358.22-75: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_config/pin@p129: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1359.22-126: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_config/pin@p130: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1360.22-101: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_config/pin@p131: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1361.22-75: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_config/pin@p133: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1362.22-75: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_config/pin@p134: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1366.46-1369.15: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_defines/pin_define@HDMI_CONTROL_ATTACHED: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1370.36-1373.15: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_defines/pin_define@NUM_CAMERAS: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1374.42-1377.15: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_defines/pin_define@CAMERA_0_I2C_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1378.41-1381.15: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_defines/pin_define@CAMERA_0_SDA_PIN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1382.41-1385.15: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_defines/pin_define@CAMERA_0_SCL_PIN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1386.42-1389.15: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_defines/pin_define@CAMERA_0_SHUTDOWN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1390.45-1393.15: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_defines/pin_define@CAMERA_0_UNICAM_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1394.37-1397.15: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_defines/pin_define@CAMERA_0_LED: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1398.39-1400.15: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_defines/pin_define@FLASH_0_ENABLE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1401.42-1403.15: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_defines/pin_define@FLASH_0_INDICATOR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1404.39-1406.15: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_defines/pin_define@FLASH_1_ENABLE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1407.42-1409.15: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_defines/pin_define@FLASH_1_INDICATOR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1410.34-1412.15: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_defines/pin_define@POWER_LOW: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1413.36-1416.15: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_defines/pin_define@LEDS_PWR_OK: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1417.43-1420.15: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_defines/pin_define@LEDS_DISK_ACTIVITY: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1421.32-1424.15: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_defines/pin_define@LAN_RUN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1425.37-1428.15: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_defines/pin_define@LAN_RUN_BOOT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1429.30-1432.15: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_defines/pin_define@BT_ON: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1433.30-1436.15: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_defines/pin_define@WL_ON: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1437.33-1440.15: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_defines/pin_define@SMPS_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1441.33-1444.15: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_defines/pin_define@SMPS_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1445.32-1448.15: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_defines/pin_define@ETH_CLK: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1449.35-1452.15: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_defines/pin_define@WL_LPO_CLK: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1453.38-1455.15: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_defines/pin_define@USB_LIMIT_1A2: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1456.36-1458.15: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_defines/pin_define@SIO_1V8_SEL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1459.29-1462.15: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_defines/pin_define@PWML: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1463.29-1466.15: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_defines/pin_define@PWMR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1467.34-1469.15: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_defines/pin_define@SAFE_MODE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1470.39-1472.15: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_defines/pin_define@SD_CARD_DETECT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1473.31-1476.15: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_defines/pin_define@ID_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1477.31-1480.15: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_defines/pin_define@ID_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1481.41-1484.15: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_defines/pin_define@DISPLAY_I2C_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1485.36-1488.15: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_defines/pin_define@DISPLAY_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1489.36-1492.15: Warning (unit_address_vs_reg): /videocore/pins_3bplus/pin_defines/pin_define@DISPLAY_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1498.25-1503.15: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_config/pin@default: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1504.21-101: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_config/pin@p14: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1505.21-101: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_config/pin@p15: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1506.21-99: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_config/pin@p28: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1507.21-74: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_config/pin@p29: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1508.21-101: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_config/pin@p34: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1509.21-101: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_config/pin@p35: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1510.21-101: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_config/pin@p36: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1511.21-101: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_config/pin@p37: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1512.21-101: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_config/pin@p38: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1513.21-101: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_config/pin@p39: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1514.21-102: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_config/pin@p40: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1515.21-102: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_config/pin@p41: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1516.21-73: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_config/pin@p43: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1517.21-75: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_config/pin@p44: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1518.21-75: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_config/pin@p45: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1519.21-75: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_config/pin@p46: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1520.21-75: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_config/pin@p47: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1521.21-101: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_config/pin@p48: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1522.21-101: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_config/pin@p49: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1523.21-101: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_config/pin@p50: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1524.21-101: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_config/pin@p51: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1525.21-101: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_config/pin@p52: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1526.21-101: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_config/pin@p53: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1527.22-75: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_config/pin@p128: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1528.22-75: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_config/pin@p129: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1529.22-126: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_config/pin@p130: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1530.22-75: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_config/pin@p133: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1531.22-75: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_config/pin@p134: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1535.46-1538.15: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_defines/pin_define@HDMI_CONTROL_ATTACHED: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1539.36-1542.15: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_defines/pin_define@NUM_CAMERAS: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1543.42-1546.15: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_defines/pin_define@CAMERA_0_I2C_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1547.41-1550.15: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_defines/pin_define@CAMERA_0_SDA_PIN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1551.41-1554.15: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_defines/pin_define@CAMERA_0_SCL_PIN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1555.42-1558.15: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_defines/pin_define@CAMERA_0_SHUTDOWN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1559.45-1562.15: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_defines/pin_define@CAMERA_0_UNICAM_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1563.37-1566.15: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_defines/pin_define@CAMERA_0_LED: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1567.39-1569.15: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_defines/pin_define@FLASH_0_ENABLE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1570.42-1572.15: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_defines/pin_define@FLASH_0_INDICATOR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1573.39-1575.15: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_defines/pin_define@FLASH_1_ENABLE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1576.42-1578.15: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_defines/pin_define@FLASH_1_INDICATOR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1579.34-1581.15: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_defines/pin_define@POWER_LOW: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1582.36-1585.15: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_defines/pin_define@LEDS_PWR_OK: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1586.43-1589.15: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_defines/pin_define@LEDS_DISK_ACTIVITY: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1590.32-1592.15: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_defines/pin_define@LAN_RUN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1593.37-1596.15: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_defines/pin_define@LAN_RUN_BOOT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1597.30-1600.15: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_defines/pin_define@BT_ON: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1601.30-1604.15: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_defines/pin_define@WL_ON: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1605.33-1608.15: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_defines/pin_define@SMPS_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1609.33-1612.15: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_defines/pin_define@SMPS_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1613.32-1615.15: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_defines/pin_define@ETH_CLK: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1616.35-1619.15: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_defines/pin_define@WL_LPO_CLK: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1620.38-1622.15: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_defines/pin_define@USB_LIMIT_1A2: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1623.36-1625.15: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_defines/pin_define@SIO_1V8_SEL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1626.29-1629.15: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_defines/pin_define@PWML: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1630.29-1633.15: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_defines/pin_define@PWMR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1634.34-1636.15: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_defines/pin_define@SAFE_MODE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1637.39-1639.15: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_defines/pin_define@SD_CARD_DETECT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1640.31-1643.15: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_defines/pin_define@ID_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1644.31-1647.15: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_defines/pin_define@ID_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1648.41-1651.15: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_defines/pin_define@DISPLAY_I2C_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1652.36-1655.15: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_defines/pin_define@DISPLAY_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1656.36-1659.15: Warning (unit_address_vs_reg): /videocore/pins_3aplus/pin_defines/pin_define@DISPLAY_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1665.25-1670.15: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_config/pin@default: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1671.21-75: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_config/pin@p0: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1672.21-75: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_config/pin@p1: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1673.21-75: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_config/pin@p2: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1674.21-75: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_config/pin@p3: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1675.21-101: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_config/pin@p14: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1676.21-98: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_config/pin@p15: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1677.21-75: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_config/pin@p46: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1678.21-75: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_config/pin@p47: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1679.21-101: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_config/pin@p48: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1680.21-101: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_config/pin@p49: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1681.21-101: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_config/pin@p50: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1682.21-101: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_config/pin@p51: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1683.21-101: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_config/pin@p52: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1684.21-101: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_config/pin@p53: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1685.22-100: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_config/pin@p128: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1686.22-100: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_config/pin@p129: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1690.46-1693.15: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_defines/pin_define@HDMI_CONTROL_ATTACHED: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1694.36-1697.15: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_defines/pin_define@EMMC_ENABLE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1698.36-1701.15: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_defines/pin_define@NUM_CAMERAS: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1702.34-1704.15: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_defines/pin_define@POWER_LOW: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1705.43-1707.15: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_defines/pin_define@LEDS_DISK_ACTIVITY: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1708.32-1710.15: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_defines/pin_define@LAN_RUN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1711.33-1714.15: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_defines/pin_define@SMPS_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1715.33-1718.15: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_defines/pin_define@SMPS_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1719.32-1721.15: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_defines/pin_define@ETH_CLK: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1722.35-1724.15: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_defines/pin_define@WL_LPO_CLK: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1725.38-1727.15: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_defines/pin_define@USB_LIMIT_1A2: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1728.36-1730.15: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_defines/pin_define@SIO_1V8_SEL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1731.29-1733.15: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_defines/pin_define@PWML: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1734.29-1736.15: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_defines/pin_define@PWMR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1737.34-1739.15: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_defines/pin_define@SAFE_MODE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1740.39-1742.15: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_defines/pin_define@SD_CARD_DETECT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1743.31-1745.15: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_defines/pin_define@ID_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1746.31-1748.15: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_defines/pin_define@ID_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1749.37-1752.15: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_defines/pin_define@CAMERA_0_LED: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1753.42-1756.15: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_defines/pin_define@CAMERA_0_SHUTDOWN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1757.45-1760.15: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_defines/pin_define@CAMERA_0_UNICAM_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1761.42-1764.15: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_defines/pin_define@CAMERA_0_I2C_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1765.41-1768.15: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_defines/pin_define@CAMERA_0_SDA_PIN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1769.41-1772.15: Warning (unit_address_vs_reg): /videocore/pins_cm3/pin_defines/pin_define@CAMERA_0_SCL_PIN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1778.25-1783.15: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_config/pin@default: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1784.21-101: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_config/pin@p14: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1785.21-98: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_config/pin@p15: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1786.21-75: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_config/pin@p46: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1787.21-75: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_config/pin@p47: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1788.21-101: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_config/pin@p48: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1789.21-101: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_config/pin@p49: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1790.21-101: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_config/pin@p50: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1791.21-101: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_config/pin@p51: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1792.21-101: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_config/pin@p52: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1793.21-101: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_config/pin@p53: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1794.22-75: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_config/pin@p128: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1795.22-75: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_config/pin@p129: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1796.22-126: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_config/pin@p130: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1797.22-75: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_config/pin@p131: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1798.22-75: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_config/pin@p132: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1799.22-75: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_config/pin@p133: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1800.22-101: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_config/pin@p134: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1801.22-75: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_config/pin@p135: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1805.46-1808.15: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_defines/pin_define@HDMI_CONTROL_ATTACHED: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1809.36-1812.15: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_defines/pin_define@EMMC_ENABLE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1813.36-1816.15: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_defines/pin_define@NUM_CAMERAS: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1817.34-1819.15: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_defines/pin_define@POWER_LOW: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1820.43-1822.15: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_defines/pin_define@LEDS_DISK_ACTIVITY: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1823.32-1825.15: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_defines/pin_define@LAN_RUN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1826.30-1829.15: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_defines/pin_define@BT_ON: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1830.30-1833.15: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_defines/pin_define@WL_ON: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1834.33-1837.15: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_defines/pin_define@SMPS_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1838.33-1841.15: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_defines/pin_define@SMPS_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1842.32-1844.15: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_defines/pin_define@ETH_CLK: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1845.35-1847.15: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_defines/pin_define@WL_LPO_CLK: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1848.38-1850.15: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_defines/pin_define@USB_LIMIT_1A2: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1851.36-1853.15: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_defines/pin_define@SIO_1V8_SEL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1854.29-1856.15: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_defines/pin_define@PWML: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1857.29-1859.15: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_defines/pin_define@PWMR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1860.34-1862.15: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_defines/pin_define@SAFE_MODE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1863.39-1865.15: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_defines/pin_define@SD_CARD_DETECT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1866.31-1869.15: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_defines/pin_define@ID_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1870.31-1873.15: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_defines/pin_define@ID_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1874.42-1877.15: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_defines/pin_define@CAMERA_0_I2C_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1878.41-1881.15: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_defines/pin_define@CAMERA_0_SDA_PIN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1882.41-1885.15: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_defines/pin_define@CAMERA_0_SCL_PIN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1886.42-1889.15: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_defines/pin_define@CAMERA_0_SHUTDOWN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1890.45-1893.15: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_defines/pin_define@CAMERA_0_UNICAM_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1894.37-1896.15: Warning (unit_address_vs_reg): /videocore/pins_cm4/pin_defines/pin_define@CAMERA_0_LED: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1902.25-1907.15: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_config/pin@default: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1908.21-101: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_config/pin@p14: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1909.21-98: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_config/pin@p15: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1910.21-75: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_config/pin@p28: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1911.21-75: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_config/pin@p29: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1912.21-73: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_config/pin@p32: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1913.21-77: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_config/pin@p41: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1914.21-99: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_config/pin@p46: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1915.21-94: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_config/pin@p47: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1916.21-101: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_config/pin@p48: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1917.21-101: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_config/pin@p49: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1918.21-101: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_config/pin@p50: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1919.21-101: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_config/pin@p51: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1920.21-101: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_config/pin@p52: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1921.21-101: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_config/pin@p53: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1925.46-1928.15: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_defines/pin_define@HDMI_CONTROL_ATTACHED: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1929.36-1932.15: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_defines/pin_define@NUM_CAMERAS: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1933.42-1936.15: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_defines/pin_define@CAMERA_0_I2C_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1937.41-1940.15: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_defines/pin_define@CAMERA_0_SDA_PIN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1941.41-1944.15: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_defines/pin_define@CAMERA_0_SCL_PIN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1945.42-1948.15: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_defines/pin_define@CAMERA_0_SHUTDOWN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1949.45-1952.15: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_defines/pin_define@CAMERA_0_UNICAM_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1953.37-1956.15: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_defines/pin_define@CAMERA_0_LED: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1957.39-1959.15: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_defines/pin_define@FLASH_0_ENABLE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1960.42-1962.15: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_defines/pin_define@FLASH_0_INDICATOR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1963.39-1965.15: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_defines/pin_define@FLASH_1_ENABLE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1966.42-1968.15: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_defines/pin_define@FLASH_1_INDICATOR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1969.34-1971.15: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_defines/pin_define@POWER_LOW: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1972.43-1975.15: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_defines/pin_define@LEDS_DISK_ACTIVITY: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1976.32-1978.15: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_defines/pin_define@LAN_RUN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1979.33-1981.15: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_defines/pin_define@SMPS_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1982.33-1984.15: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_defines/pin_define@SMPS_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1985.32-1987.15: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_defines/pin_define@ETH_CLK: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1988.38-1990.15: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_defines/pin_define@USB_LIMIT_1A2: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1991.36-1993.15: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_defines/pin_define@SIO_1V8_SEL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1994.29-1996.15: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_defines/pin_define@PWML: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:1997.29-1999.15: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_defines/pin_define@PWMR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2000.34-2002.15: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_defines/pin_define@SAFE_MODE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2003.39-2005.15: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_defines/pin_define@SD_CARD_DETECT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2006.31-2009.15: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_defines/pin_define@ID_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2010.31-2013.15: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_defines/pin_define@ID_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2014.41-2016.15: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_defines/pin_define@DISPLAY_I2C_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2017.36-2019.15: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_defines/pin_define@DISPLAY_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2020.36-2022.15: Warning (unit_address_vs_reg): /videocore/pins_pi0/pin_defines/pin_define@DISPLAY_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2028.25-2033.15: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_config/pin@default: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2034.21-101: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_config/pin@p14: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2035.21-98: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_config/pin@p15: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2036.21-75: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_config/pin@p28: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2037.21-75: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_config/pin@p29: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2038.21-101: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_config/pin@p34: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2039.21-101: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_config/pin@p35: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2040.21-101: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_config/pin@p36: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2041.21-101: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_config/pin@p37: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2042.21-101: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_config/pin@p38: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2043.21-101: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_config/pin@p39: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2044.21-73: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_config/pin@p40: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2045.21-74: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_config/pin@p41: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2046.21-73: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_config/pin@p43: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2047.21-74: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_config/pin@p44: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2048.21-74: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_config/pin@p45: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2049.21-99: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_config/pin@p46: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2050.21-94: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_config/pin@p47: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2051.21-101: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_config/pin@p48: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2052.21-101: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_config/pin@p49: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2053.21-101: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_config/pin@p50: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2054.21-101: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_config/pin@p51: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2055.21-101: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_config/pin@p52: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2056.21-101: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_config/pin@p53: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2060.46-2063.15: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_defines/pin_define@HDMI_CONTROL_ATTACHED: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2064.36-2067.15: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_defines/pin_define@NUM_CAMERAS: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2068.42-2071.15: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_defines/pin_define@CAMERA_0_I2C_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2072.41-2075.15: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_defines/pin_define@CAMERA_0_SDA_PIN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2076.41-2079.15: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_defines/pin_define@CAMERA_0_SCL_PIN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2080.42-2083.15: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_defines/pin_define@CAMERA_0_SHUTDOWN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2084.45-2087.15: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_defines/pin_define@CAMERA_0_UNICAM_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2088.37-2091.15: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_defines/pin_define@CAMERA_0_LED: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2092.39-2094.15: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_defines/pin_define@FLASH_0_ENABLE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2095.42-2097.15: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_defines/pin_define@FLASH_0_INDICATOR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2098.39-2100.15: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_defines/pin_define@FLASH_1_ENABLE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2101.42-2103.15: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_defines/pin_define@FLASH_1_INDICATOR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2104.34-2106.15: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_defines/pin_define@POWER_LOW: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2107.43-2110.15: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_defines/pin_define@LEDS_DISK_ACTIVITY: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2111.32-2113.15: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_defines/pin_define@LAN_RUN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2114.30-2117.15: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_defines/pin_define@BT_ON: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2118.30-2121.15: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_defines/pin_define@WL_ON: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2122.35-2125.15: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_defines/pin_define@WL_LPO_CLK: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2126.33-2128.15: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_defines/pin_define@SMPS_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2129.33-2131.15: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_defines/pin_define@SMPS_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2132.32-2134.15: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_defines/pin_define@ETH_CLK: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2135.38-2137.15: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_defines/pin_define@USB_LIMIT_1A2: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2138.36-2140.15: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_defines/pin_define@SIO_1V8_SEL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2141.29-2143.15: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_defines/pin_define@PWML: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2144.29-2146.15: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_defines/pin_define@PWMR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2147.34-2149.15: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_defines/pin_define@SAFE_MODE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2150.39-2152.15: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_defines/pin_define@SD_CARD_DETECT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2153.31-2156.15: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_defines/pin_define@ID_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2157.31-2160.15: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_defines/pin_define@ID_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2161.41-2163.15: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_defines/pin_define@DISPLAY_I2C_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2164.36-2166.15: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_defines/pin_define@DISPLAY_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2167.36-2169.15: Warning (unit_address_vs_reg): /videocore/pins_pi0w/pin_defines/pin_define@DISPLAY_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2175.25-2180.15: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_config/pin@default: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2181.21-75: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_config/pin@p0: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2182.21-75: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_config/pin@p1: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2183.21-75: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_config/pin@p2: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2184.21-75: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_config/pin@p3: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2185.21-74: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_config/pin@p14: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2186.21-71: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_config/pin@p15: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2187.21-99: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_config/pin@p47: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2188.21-101: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_config/pin@p48: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2189.21-101: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_config/pin@p49: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2190.21-101: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_config/pin@p50: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2191.21-101: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_config/pin@p51: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2192.21-101: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_config/pin@p52: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2193.21-101: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_config/pin@p53: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2197.36-2200.15: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_defines/pin_define@EMMC_ENABLE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2201.36-2204.15: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_defines/pin_define@NUM_CAMERAS: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2205.34-2207.15: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_defines/pin_define@POWER_LOW: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2208.43-2210.15: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_defines/pin_define@LEDS_DISK_ACTIVITY: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2211.32-2213.15: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_defines/pin_define@LAN_RUN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2214.33-2216.15: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_defines/pin_define@SMPS_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2217.33-2219.15: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_defines/pin_define@SMPS_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2220.32-2222.15: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_defines/pin_define@ETH_CLK: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2223.35-2225.15: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_defines/pin_define@WL_LPO_CLK: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2226.38-2228.15: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_defines/pin_define@USB_LIMIT_1A2: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2229.36-2231.15: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_defines/pin_define@SIO_1V8_SEL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2232.29-2234.15: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_defines/pin_define@PWML: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2235.29-2237.15: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_defines/pin_define@PWMR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2238.34-2240.15: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_defines/pin_define@SAFE_MODE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2241.39-2243.15: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_defines/pin_define@SD_CARD_DETECT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2244.31-2246.15: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_defines/pin_define@ID_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2247.31-2249.15: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_defines/pin_define@ID_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2250.37-2253.15: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_defines/pin_define@CAMERA_0_LED: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2254.42-2257.15: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_defines/pin_define@CAMERA_0_SHUTDOWN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2258.45-2261.15: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_defines/pin_define@CAMERA_0_UNICAM_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2262.42-2265.15: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_defines/pin_define@CAMERA_0_I2C_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2266.41-2269.15: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_defines/pin_define@CAMERA_0_SDA_PIN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2270.41-2273.15: Warning (unit_address_vs_reg): /videocore/pins_cm/pin_defines/pin_define@CAMERA_0_SCL_PIN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2279.25-2284.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_config/pin@default: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2285.21-101: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_config/pin@p14: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2286.21-98: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_config/pin@p15: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2287.21-101: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_config/pin@p34: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2288.21-101: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_config/pin@p35: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2289.21-101: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_config/pin@p36: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2290.21-101: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_config/pin@p37: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2291.21-101: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_config/pin@p38: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2292.21-101: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_config/pin@p39: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2293.21-102: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_config/pin@p40: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2294.21-102: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_config/pin@p41: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2295.21-71: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_config/pin@p42: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2296.21-71: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_config/pin@p43: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2297.21-71: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_config/pin@p44: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2298.21-71: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_config/pin@p45: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2299.21-99: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_config/pin@p46: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2300.22-75: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_config/pin@p128: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2301.22-75: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_config/pin@p129: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2302.22-126: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_config/pin@p130: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2303.22-75: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_config/pin@p131: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2304.22-75: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_config/pin@p132: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2305.22-75: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_config/pin@p133: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2306.22-101: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_config/pin@p134: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2310.46-2312.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@HDMI_CONTROL_ATTACHED: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2313.36-2315.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@EMMC_ENABLE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2316.36-2319.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@NUM_CAMERAS: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2320.42-2323.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@CAMERA_0_I2C_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2324.41-2327.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@CAMERA_0_SDA_PIN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2328.41-2331.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@CAMERA_0_SCL_PIN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2332.42-2335.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@CAMERA_0_SHUTDOWN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2336.45-2339.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@CAMERA_0_UNICAM_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2340.37-2342.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@CAMERA_0_LED: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2343.39-2345.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@FLASH_0_ENABLE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2346.42-2348.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@FLASH_0_INDICATOR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2349.39-2351.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@FLASH_1_ENABLE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2352.42-2354.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@FLASH_1_INDICATOR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2355.34-2357.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@POWER_LOW: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2358.36-2361.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@LEDS_PWR_OK: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2362.43-2365.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@LEDS_DISK_ACTIVITY: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2366.32-2368.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@LAN_RUN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2369.30-2372.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@BT_ON: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2373.30-2376.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@WL_ON: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2377.37-2380.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@GLOBAL_RESET: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2381.33-2383.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@SMPS_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2384.33-2386.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@SMPS_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2387.32-2389.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@ETH_CLK: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2390.35-2392.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@WL_LPO_CLK: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2393.38-2395.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@USB_LIMIT_1A2: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2396.36-2399.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@SIO_1V8_SEL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2400.34-2403.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@SD_PWR_ON: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2404.29-2407.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@PWML: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2408.29-2411.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@PWMR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2412.34-2414.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@SAFE_MODE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2415.39-2417.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@SD_CARD_DETECT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2418.31-2421.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@ID_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2422.31-2425.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@ID_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2426.41-2429.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@DISPLAY_I2C_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2430.36-2433.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@DISPLAY_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2434.36-2437.15: Warning (unit_address_vs_reg): /videocore/pins_4b/pin_defines/pin_define@DISPLAY_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2443.25-2448.15: Warning (unit_address_vs_reg): /videocore/pins_400/pin_config/pin@default: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2449.21-101: Warning (unit_address_vs_reg): /videocore/pins_400/pin_config/pin@p14: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2450.21-98: Warning (unit_address_vs_reg): /videocore/pins_400/pin_config/pin@p15: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2451.21-101: Warning (unit_address_vs_reg): /videocore/pins_400/pin_config/pin@p34: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2452.21-101: Warning (unit_address_vs_reg): /videocore/pins_400/pin_config/pin@p35: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2453.21-101: Warning (unit_address_vs_reg): /videocore/pins_400/pin_config/pin@p36: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2454.21-101: Warning (unit_address_vs_reg): /videocore/pins_400/pin_config/pin@p37: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2455.21-101: Warning (unit_address_vs_reg): /videocore/pins_400/pin_config/pin@p38: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2456.21-101: Warning (unit_address_vs_reg): /videocore/pins_400/pin_config/pin@p39: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2457.21-101: Warning (unit_address_vs_reg): /videocore/pins_400/pin_config/pin@p40: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2458.21-101: Warning (unit_address_vs_reg): /videocore/pins_400/pin_config/pin@p41: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2459.21-124: Warning (unit_address_vs_reg): /videocore/pins_400/pin_config/pin@p42: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2460.21-71: Warning (unit_address_vs_reg): /videocore/pins_400/pin_config/pin@p43: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2461.21-71: Warning (unit_address_vs_reg): /videocore/pins_400/pin_config/pin@p44: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2462.21-71: Warning (unit_address_vs_reg): /videocore/pins_400/pin_config/pin@p45: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2463.21-99: Warning (unit_address_vs_reg): /videocore/pins_400/pin_config/pin@p46: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2464.22-75: Warning (unit_address_vs_reg): /videocore/pins_400/pin_config/pin@p128: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2465.22-75: Warning (unit_address_vs_reg): /videocore/pins_400/pin_config/pin@p129: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2466.22-126: Warning (unit_address_vs_reg): /videocore/pins_400/pin_config/pin@p130: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2467.22-75: Warning (unit_address_vs_reg): /videocore/pins_400/pin_config/pin@p131: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2468.22-75: Warning (unit_address_vs_reg): /videocore/pins_400/pin_config/pin@p132: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2469.22-75: Warning (unit_address_vs_reg): /videocore/pins_400/pin_config/pin@p133: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2470.22-101: Warning (unit_address_vs_reg): /videocore/pins_400/pin_config/pin@p134: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2474.46-2476.15: Warning (unit_address_vs_reg): /videocore/pins_400/pin_defines/pin_define@HDMI_CONTROL_ATTACHED: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2477.36-2479.15: Warning (unit_address_vs_reg): /videocore/pins_400/pin_defines/pin_define@EMMC_ENABLE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2480.36-2483.15: Warning (unit_address_vs_reg): /videocore/pins_400/pin_defines/pin_define@NUM_CAMERAS: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2484.34-2486.15: Warning (unit_address_vs_reg): /videocore/pins_400/pin_defines/pin_define@POWER_LOW: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2487.36-2490.15: Warning (unit_address_vs_reg): /videocore/pins_400/pin_defines/pin_define@LEDS_PWR_OK: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2491.43-2493.15: Warning (unit_address_vs_reg): /videocore/pins_400/pin_defines/pin_define@LEDS_DISK_ACTIVITY: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2494.32-2496.15: Warning (unit_address_vs_reg): /videocore/pins_400/pin_defines/pin_define@LAN_RUN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2497.30-2500.15: Warning (unit_address_vs_reg): /videocore/pins_400/pin_defines/pin_define@BT_ON: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2501.30-2504.15: Warning (unit_address_vs_reg): /videocore/pins_400/pin_defines/pin_define@WL_ON: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2505.37-2508.15: Warning (unit_address_vs_reg): /videocore/pins_400/pin_defines/pin_define@GLOBAL_RESET: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2509.40-2512.15: Warning (unit_address_vs_reg): /videocore/pins_400/pin_defines/pin_define@GLOBAL_SHUTDOWN: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2513.41-2516.15: Warning (unit_address_vs_reg): /videocore/pins_400/pin_defines/pin_define@SHUTDOWN_REQUEST: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2517.33-2519.15: Warning (unit_address_vs_reg): /videocore/pins_400/pin_defines/pin_define@SMPS_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2520.33-2522.15: Warning (unit_address_vs_reg): /videocore/pins_400/pin_defines/pin_define@SMPS_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2523.32-2525.15: Warning (unit_address_vs_reg): /videocore/pins_400/pin_defines/pin_define@ETH_CLK: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2526.35-2528.15: Warning (unit_address_vs_reg): /videocore/pins_400/pin_defines/pin_define@WL_LPO_CLK: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2529.38-2531.15: Warning (unit_address_vs_reg): /videocore/pins_400/pin_defines/pin_define@USB_LIMIT_1A2: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2532.36-2535.15: Warning (unit_address_vs_reg): /videocore/pins_400/pin_defines/pin_define@SIO_1V8_SEL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2536.34-2539.15: Warning (unit_address_vs_reg): /videocore/pins_400/pin_defines/pin_define@SD_PWR_ON: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2540.29-2542.15: Warning (unit_address_vs_reg): /videocore/pins_400/pin_defines/pin_define@PWML: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2543.29-2545.15: Warning (unit_address_vs_reg): /videocore/pins_400/pin_defines/pin_define@PWMR: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2546.34-2548.15: Warning (unit_address_vs_reg): /videocore/pins_400/pin_defines/pin_define@SAFE_MODE: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2549.39-2551.15: Warning (unit_address_vs_reg): /videocore/pins_400/pin_defines/pin_define@SD_CARD_DETECT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2552.31-2555.15: Warning (unit_address_vs_reg): /videocore/pins_400/pin_defines/pin_define@ID_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2556.31-2559.15: Warning (unit_address_vs_reg): /videocore/pins_400/pin_defines/pin_define@ID_SCL: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2560.41-2563.15: Warning (unit_address_vs_reg): /videocore/pins_400/pin_defines/pin_define@DISPLAY_I2C_PORT: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2564.36-2567.15: Warning (unit_address_vs_reg): /videocore/pins_400/pin_defines/pin_define@DISPLAY_SDA: node has a unit name, but no reg or ranges property
+dt-blob-cam1.dts:2568.36-2571.15: Warning (unit_address_vs_reg): /videocore/pins_400/pin_defines/pin_define@DISPLAY_SCL: node has a unit name, but no reg or ranges property
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+Cloning into 'PupperCommand'...
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+Created symlink /etc/systemd/system/multi-user.target.wants/joystick.service → /home/ubuntu/PupperCommand/joystick.service.
+Created symlink /etc/systemd/system/joystick.service → /home/ubuntu/PupperCommand/joystick.service.
+Cloning into 'UDPComms'...
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+/home/ubuntu/UDPComms/setup.py:3: DeprecationWarning: The distutils package is deprecated and slated for removal in Python 3.12. Use setuptools or check PEP 632 for potential alternatives
+  from distutils.core import setup
+'build/lib' does not exist -- can't clean it
+'build/bdist.linux-aarch64' does not exist -- can't clean it
+'build/scripts-3.10' does not exist -- can't clean it
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+Cloning into 'PS4Joystick'...
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+/home/ubuntu/PS4Joystick/setup.py:3: DeprecationWarning: The distutils package is deprecated and slated for removal in Python 3.12. Use setuptools or check PEP 632 for potential alternatives
+  from distutils.core import setup
+'build/lib' does not exist -- can't clean it
+'build/bdist.linux-aarch64' does not exist -- can't clean it
+'build/scripts-3.10' does not exist -- can't clean it
+Created symlink /etc/systemd/system/multi-user.target.wants/robot.service → /home/ubuntu/StanfordQuadruped/robot.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/restart_joy.service → /lib/systemd/system/restart_joy.service.
++++ dirname -- /home/ubuntu/mini_pupper_web_controller/webserver/install.sh
+++ cd -- /home/ubuntu/mini_pupper_web_controller/webserver
+++ pwd
++ BASEDIR=/home/ubuntu/mini_pupper_web_controller/webserver
+++ cd /home/ubuntu/mini_pupper_web_controller/webserver
+++ /home/ubuntu/mini_pupper_bsp/get-version.sh
++ echo 'WEBCONTROLLER_VERSION="1.0.2.1"'
++ source /home/ubuntu/mini-pupper-release
+++ BUILD_DATE='Sun Aug 20 08:54:17 UTC 2023'
+++ HARDWARE=mini_pupper_2
+++ MACHINE=aarch64
+++ CLOUD_INIT_CLONE='git clone https://github.com/mangdangroboticsclub/mini_pupper_2_bsp.git ~/mini_pupper_bsp git clone https://github.com/mangdangroboticsclub/StanfordQuadruped.git ~/StanfordQuadruped git clone https://github.com/mangdangroboticsclub/mini_pupper_web_controller.git ~/mini_pupper_web_controller'
+++ CLOUD_INIT_SCRIPT='~/mini_pupper_web_controller/setup.sh v2 2>> /home/ubuntu/.setup_err.log >> /home/ubuntu/.setup_out.log sudo reboot 2>> /home/ubuntu/.setup_err.log >> /home/ubuntu/.setup_out.log'
+++ BSP_VERSION=1.0.2
+++ IS_RELEASE=YES
+++ STANFORD_VERSION=1.0.2
+++ WEBCONTROLLER_VERSION=1.0.2.1
++ sudo rm -rf /usr/lib/python3/dist-packages/blinker /usr/lib/python3/dist-packages/blinker-1.4.egg-info
++ '[' YES == YES ']'
++ cd /home/ubuntu/mini_pupper_web_controller/webserver
+++ git rev-list --abbrev-commit --tags --max-count=1
++ TAG_COMMIT=abff769
+++ git describe --abbrev=0 --tags abff769
++ TAG=v1.0.2.1
++ '[' v1.0.2.1 '!=' v1.0.2.1 ']'
+++ cd /home/ubuntu/mini_pupper_web_controller/webserver
+++ /home/ubuntu/mini_pupper_bsp/get-version.sh
++ VERSION=1.0.2.1
++ sudo PBR_VERSION=1.0.2.1 pip install /home/ubuntu/mini_pupper_web_controller/webserver/backend
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
++ sudo PBR_VERSION=1.0.2.1 pip install /home/ubuntu/mini_pupper_web_controller/webserver/../joystick_sim
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
++ sudo ln -s /home/ubuntu/mini_pupper_web_controller/webserver/web-controller.service /etc/systemd/system/
++ sudo systemctl daemon-reload
++ sudo systemctl enable web-controller
+Created symlink /etc/systemd/system/multi-user.target.wants/web-controller.service → /home/ubuntu/mini_pupper_web_controller/webserver/web-controller.service.
++ sudo systemctl start web-controller

@@ -1,0 +1,4 @@
+[http]
+	sslverify = false
+[user]
+	email = jainch@oregonstate.edu

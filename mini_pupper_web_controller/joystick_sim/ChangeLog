@@ -1,0 +1,39 @@
+CHANGES
+=======
+
+v1.0.2.1
+--------
+
+* fixed install script when git repo is tagged
+
+v1.0.2
+------
+
+* fix release test
+
+v1.0.1
+------
+
+* fixing installation
+* fixing installation scripts
+* update server version
+
+v1.0.0
+------
+
+* Update readme
+* Update readme
+* Update readme and add image files
+* Update readme
+* updated installation
+* improved installation
+* fixing test procedure
+* Update readme
+* added class to joystick\_sim/joystick\_sim/joystick.py to compare files with consecitive duplicated lines
+* slightly impoved assertion test in joystick\_sim/tests/test\_sequences.py
+* added unit tests for joystick\_sim
+* fixed typ and some left over mivgration from minipupper to mini\_pupper
+* rename minipupper to mini\_pupper
+* minor GUI fixes of the frontend
+* transfereed code to MangDang
+* Initial commit
