@@ -603,3 +603,196 @@ git pull origin main
 git config pull.rebase false
 git pull origin main
 sudo shutdown -h now
+ls
+cd mini_pupper_bsp/Python_Module/MangDang/mini_pupper/
+ls
+nano servo_interface_cj.py 
+sudo python3 yaw_mov.py 
+sunano position.py 
+nano position.py 
+python3 position.py 
+nano yaw_mov.py 
+git add .
+git push
+python3 servo_interface_cj.py 
+git pull
+git -fsck
+git fsck
+cd .git/objects/c3/4b454b4fe51654ce891cb6a600cdd4f5354a06
+cd .git/objects/c3/
+ls
+rm -rf 4b454b4fe51654ce891cb6a600cdd4f5354a06
+ls
+cd ~
+git p
+cd .git/objects/c3/
+cd ..
+cd 2d
+rm -rf 4f5706c8d2fd306610d9822f8a7674229b1ff8
+cd ~
+git pull
+cd .git/objects/bd
+rm -rf c30383e73552630e99b68a394191d7f3aa3347
+cd ~
+git pull
+cd .git/objects/98
+rm -rf 19966df80202706d7bceb6eca69ec22d129c1c
+cd ~
+git pull
+git push origin main
+git pull ...
+git pull origin mian
+git pull origin main
+cd .git/objects/02/
+rm -rf d51545783038d863c7be6f60ca83e0f9162713
+git pull
+cd ~
+git pull
+cd .git/objects/c0/
+rm -rf 6800f4c18a9fbcbc755dc9ec0c76350950d3a5
+cd ~
+git pull
+cd mini_pupper_bsp/Python_Module/MangDang/mini_pupper/
+ls
+nano touch_command.py 
+cd ~
+rm -rf .git
+git pull
+git init
+git add .
+git pull
+git pull origin main
+git push
+git clone https://github.com/chiragjain0/minipupper2.git
+ls
+cd minipupper2/
+ls
+cd mini_pupper_bsp/Python_Module/MangDang/mini_pupper/
+ls
+sudo python3 touch_command.py 
+ls
+cd moonphases/
+ls
+cd ~
+ls
+cd minipupper2/
+ls
+cd mini_pupper_bsp/Python_Module/MangDang/mini_pupper/
+ls
+nano touch_command.py 
+cd ~
+cd mini_pupper_bsp/
+cd Python_Module/MangDang/mini_pupper/
+rm touch_command.py 
+nano touch_command.py 
+python3 touch_command.py 
+nano touch_command.py 
+python3 touch_command.py 
+nano touch_command.py 
+python3 touch_command.py 
+sudo shutdown -h now
+ls
+rm -rf minipupper2/
+sudo rm -rf minipupper2/
+cd mini_pupper_bsp
+cd Python_Module/MangDang/mini_pupper/
+ls
+sudo python3 touch_command.py 
+nano touch_command.py 
+sudo python3 touch_command.py 
+nano touch_command.py 
+nano helper_movement.py 
+nano touch_command.py 
+sudo python3 touch_command.py 
+nano touch_command.py 
+ls
+cd mini_pupper_bsp/Python_Module/MangDang/mini_pupper/
+ls
+nano touch_command.py 
+cd mini_pupper_bsp/
+cd Python_Module/MangDang/mini_pupper/
+rm touch_command.py 
+mk touch_command.py
+ls
+touch touch_command.py
+ls
+nano touch_command.py 
+sudu python3 touch_command.py 
+sudo python3 touch_command.py 
+nano touch_command.py 
+rm touch_command.py 
+touch touch_command.py
+nano touch_command.py 
+sudo python3 touch_command.py 
+nano touch_command.py 
+sudo python3 touch_command.py 
+nano touch_command.py 
+sudo python3 touch_command.py 
+nano touch_command.py 
+ls
+cd mini_pupper_bsp
+cd Python_Module/MangDang/mini_pupper/
+nano touch_command.py 
+sudo python3 touch_command.py 
+nano touch_command.py 
+sudo python3 touch_command.py 
+nano touch_command.py 
+sudo python3 touch_command.py 
+nano touch_command.py 
+sudo python3 touch_command.py 
+sudo shutdown -h now
+cd mini_pupper_bsp/Python_Module/MangDang/mini_pupper/
+ls
+sudo python3 touch_command.py 
+sudo shutdown -h now
+cd mini_pupper_bsp/Python_Module/MangDang/mini_pupper/
+ls
+sudo python3 touch_command.py 
+sudo shutdown -h now
+cd mini_pupper_bsp/Python_Module/MangDang/mini_pupper/
+sudo python3 touch_command.py 
+nano touch_command.py 
+sudo python3 touch_command.py 
+sudo shutdown -h now
+cd mini_pupper_bsp/Python_Module/MangDang/mini_pupper/
+sudo python3 touch_command.py 
+nano touch_command.py 
+sudo python3 touch_command.p
+sudo python3 touch_command.py
+nano touch_command.py 
+sudo python3 touch_command.py
+nano touch_command.py 
+sudo python3 touch_command.py
+ls
+cd moonphases/
+ls
+cd ..
+sudo python3 touch_command.py
+nano touch_command.py 
+sudo python3 touch_command.py
+nano touch_command.py 
+sudo python3 touch_command.py
+nano touch_command.py 
+sudo python3 touch_command.py
+git add .
+git commit -m "balh"
+git push
+git reset
+ls
+sudo python3 touch_command.py
+nano touch_command.py 
+sudo python3 touch_command.py
+nano touch_command.py 
+sudo python3 touch_command.py
+sudo shutdown -h now
+ls
+cd mini_pupper_bsp/Python_Module/MangDang/mini_pupper/
+ls
+sudo python3 touch_command.py 
+sudo shutdown -h now
+ls
+cd mini_pupper_web_controller/
+ls
+cd ..
+sudo nano /etc/netplan/50-cloud-init.yaml
+sudo reboot

@@ -164,25 +164,34 @@ if __name__ == "__main__":
             display_sting += ' Back'
             break
 
+	#touch right botton
         if not touchValue_Right:
-            count -= 1  # decrement counter
-            if count < 1:
-                count = 25
             display_sting += ' Right'
             msg = movement_rx_ry(0.3, 0.3)
             pub_msg(msg,wait_time)
-            image_path = f'moonphases/moon{count}.png'
-            disp.show_image(image_path)
 
+            for _ in range(3):
+              count -= 1
+              if count < 1:
+                count = 25
+              image_path = f'moonphases/moon{count}.png'
+              disp.show_image(image_path)
+              time.sleep(0.1)
+
+	
+	#touch left botton
         if not touchValue_Left:
-            count += 1  #increment counter
-            if count > 25:
-                count = 1
             display_sting += ' Left'
             msg = movement_rx_ry(-0.3,-0.3)
             pub_msg(msg,wait_time)
-            image_path = f'moonphases/moon{count}.png'
-            disp.show_image(image_path)
+
+            for _ in range(3):
+              count += 1
+              if count > 25:
+              	count = 1
+              image_path = f'moonphases/moon{count}.png'
+              disp.show_image(image_path)
+              time.sleep(0.1)
 
         if display_sting == '':
             display_sting = 'No button touched'
