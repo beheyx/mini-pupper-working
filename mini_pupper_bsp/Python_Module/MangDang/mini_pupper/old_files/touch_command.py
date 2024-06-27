@@ -186,12 +186,12 @@ if __name__ == "__main__":
             pub_msg(msg,wait_time)
 
             for _ in range(3):
-              count += 1
-              if count > 25:
-              	count = 1
-              image_path = f'moonphases/moon{count}.png'
-              disp.show_image(image_path)
-              time.sleep(0.1)
+                count += 1
+                if count > 25:
+                    count = 1
+                    image_path = f'moonphases/moon{count}.png'
+                    disp.show_image(image_path)
+                    time.sleep(0.1)
 
         if display_sting == '':
             display_sting = 'No button touched'
