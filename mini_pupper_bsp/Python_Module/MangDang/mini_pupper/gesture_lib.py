@@ -22,7 +22,6 @@ counter_a = 0
 
 class Gesture:
 
-    @staticmethod
     def default():
         global counter_a
         print("Executing default gesture")
@@ -31,7 +30,6 @@ class Gesture:
         esp32.servos_set_position(initial_position)
         print("Default leg positions set to:", initial_position)
 
-    @staticmethod
     def sit():
         global counter_a
         print("Executing sit gesture")
@@ -49,7 +47,6 @@ class Gesture:
 
         print("Sit gesture completed")
 
-    @staticmethod
     def paw():
         global counter_a
         print("Executing paw gesture")
@@ -57,8 +54,8 @@ class Gesture:
         Gesture.sit()
 
         # Uncomment and modify if additional movement for paw gesture is needed
-        # leg_positions = [512, 512, 512, 512, 512, 512, 512, 512, 300, 512, 512, 724]
-        # esp32.servos_set_position(leg_positions)
+        leg_positions = [512, 512, 512, 512, 512, 512, 512, 512, 300, 512, 512, 724]
+        esp32.servos_set_position(leg_positions)
 
 # Activate the pupper once
 msg, counter_a = helper_movement.toggle_activation(counter_a)
@@ -71,4 +68,4 @@ time.sleep(1)
 
 # Call the sit gesture
 Gesture.sit()
-# Gesture.paw()
+Gesture.paw()
