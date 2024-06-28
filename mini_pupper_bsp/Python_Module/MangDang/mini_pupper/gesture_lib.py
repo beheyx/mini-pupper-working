@@ -60,4 +60,4 @@ class Gesture:
 
 
 
-    
+Gesture.sit()
