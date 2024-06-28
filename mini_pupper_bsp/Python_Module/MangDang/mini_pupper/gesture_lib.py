@@ -22,14 +22,16 @@ counter_a = 0
 
 class Gesture:
 
+    @staticmethod
     def default():
         global counter_a
         print("Executing default gesture")
-        #starting leg positions
+        # Starting leg positions
         initial_position = [512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512]
         esp32.servos_set_position(initial_position)
         print("Default leg positions set to:", initial_position)
 
+    @staticmethod
     def sit():
         global counter_a
         print("Executing sit gesture")
@@ -45,10 +47,9 @@ class Gesture:
             esp32.servos_set_position(leg_positions)
             time.sleep(0.1)
 
-        msg, counter_a = helper_movement.toggle_movement(counter_a)
-        helper_movement.pub_msg(msg, wait_time)
         print("Sit gesture completed")
 
+    @staticmethod
     def paw():
         global counter_a
         print("Executing paw gesture")
