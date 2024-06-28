@@ -9,7 +9,7 @@ import soundfile as sf
 import time
 import os
 from display import Display
-from helper_movement import *
+from mini_pupper_bsp.Python_Module.MangDang.mini_pupper.helper_movement import *
 import time
 import RPi.GPIO as GPIO
 import math

@@ -64,6 +64,6 @@ class Gesture:
         #helper_movement.pub_msg(msg, wait_time)
 
 
-Gesture.default()
+#Gesture.default()
 Gesture.sit()
-Gesture.paw()
+#Gesture.paw()
