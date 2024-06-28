@@ -24,6 +24,8 @@ class Gesture:
 
     #gesture 1 stand
     def default():
+        global counter_a
+
         #starting leg positions
         initial_position = [512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512]  
         esp32.servos_set_position(initial_position)
@@ -33,6 +35,7 @@ class Gesture:
 
     #gesture 2 sit
     def sit():
+        global counter_a
         leg_bend = 53
         right_back_leg = 512
         left_back_leg = 512
@@ -49,6 +52,7 @@ class Gesture:
 
     #gesture 2 give me paw: sit down first, then extend front-left leg outward
     def paw():
+        global counter_a
         Gesture.default()  
         Gesture.sit()
 
