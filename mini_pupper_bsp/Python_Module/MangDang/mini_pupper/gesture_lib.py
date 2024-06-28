@@ -21,7 +21,7 @@ wait_time = 500
 counter_a = 0
 
 class Gesture:
-
+    @staticmethod
     def default():
         print("Executing default gesture")
         # Starting leg positions
@@ -29,6 +29,7 @@ class Gesture:
         esp32.servos_set_position(initial_position)
         print("Default leg positions set to:", initial_position)
 
+    @staticmethod
     def sit():
         print("Executing sit gesture")
 
@@ -46,6 +47,7 @@ class Gesture:
 
         print("Sit gesture completed")
 
+    @staticmethod
     def lie_down():
         print("Executing lie down gesture")
 
@@ -63,6 +65,7 @@ class Gesture:
 
         print("Lie down gesture completed")
 
+    @staticmethod
     def excited():
         print("Executing excited gesture")
 
@@ -84,6 +87,7 @@ class Gesture:
 
         print("Excited gesture completed")
 
+    @staticmethod
     def paw():
         print("Executing paw gesture")
 
