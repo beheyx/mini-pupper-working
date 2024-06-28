@@ -65,5 +65,8 @@ class Gesture:
 
 
 #Gesture.default()
+msg, counter_a = helper_movement.toggle_activation(counter_a)
+helper_movement.pub_msg(msg, wait_time)
+
 Gesture.sit()
 #Gesture.paw()

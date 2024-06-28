@@ -5,7 +5,7 @@ import pygame
 
 
 
-def pub_msg(msg,wait_time):
+def pub_msg(msg, wait_time):
     pub.send(msg)
     #pygame.display.flip()
     pygame.time.wait(int(1000/20))
