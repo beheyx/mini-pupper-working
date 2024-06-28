@@ -83,7 +83,7 @@ class Gesture:
         print("Excited gesture completed")
         leg_positions = [512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512]
         esp32.servos_set_position(leg_positions)
-
+        #hope this work
 
 
     def paw():
