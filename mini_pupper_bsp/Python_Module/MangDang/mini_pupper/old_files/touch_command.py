@@ -1,11 +1,11 @@
 from UDPComms import Publisher
 import pygame
-import netifaces as ni
+#import netifaces as ni
 from PIL import Image, ImageDraw, ImageFont
 from enum import Enum
 from MangDang.LCD.ST7789 import ST7789
-import sounddevice as sd
-import soundfile as sf
+#import sounddevice as sd
+#import soundfile as sf
 import time
 import os
 #from display import Display
