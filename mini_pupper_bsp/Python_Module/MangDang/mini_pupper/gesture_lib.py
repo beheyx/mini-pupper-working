@@ -45,6 +45,8 @@ class Gesture:
             esp32.servos_set_position(leg_positions)
             time.sleep(0.1)
 
+        msg, counter_a = helper_movement.toggle_movement(counter_a)
+        helper_movement.pub_msg(msg, wait_time)
         print("Sit gesture completed")
 
     def paw():
@@ -61,6 +63,10 @@ class Gesture:
 msg, counter_a = helper_movement.toggle_activation(counter_a)
 helper_movement.pub_msg(msg, wait_time)
 print("Pupper activated")
+
+# Call the default gesture to reset to known state
+Gesture.default()
+time.sleep(1)
 
 # Call the sit gesture
 Gesture.sit()
