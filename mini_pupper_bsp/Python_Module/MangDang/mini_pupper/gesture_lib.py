@@ -65,19 +65,17 @@ class Gesture:
         print("Executing excited gesture (version 2)")
 
         for i in range(4):
-            msg = helper_movement.movement_rx_ry(0.3, 0.3)
-            helper_movement.pub_msg(msg, wait_time)
+            helper_movement.movement_rx_ry(0.3, 0.3)
             time.sleep(0.5)  # Adding delay to ensure messages are processed
 
-            msg = helper_movement.movement_rx_ry(-0.3, -0.3)
-            helper_movement.pub_msg(msg, wait_time)
+            helper_movement.movement_rx_ry(-0.3, -0.3)
             time.sleep(0.5)  # Adding delay to ensure messages are processed
 
         print("Excited gesture (version 2) completed")
         
         # Reset to default state after the excited gesture
         Gesture.default()
-        
+
     # def excited():
     #     print("Executing excited gesture")
 
