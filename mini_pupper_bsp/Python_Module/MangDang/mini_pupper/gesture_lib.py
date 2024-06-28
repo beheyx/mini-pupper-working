@@ -10,8 +10,8 @@ import time
 #import os
 #from display import Display
 #from display import BehaviorState
-from mini_pupper_bsp.Python_Module.MangDang.mini_pupper.helper_movement import *
-import time
+import helper_movement
+#from mini_pupper_bsp.Python_Module.MangDang.mini_pupper.helper_movement import *
 #import RPi.GPIO as GPIO
 from MangDang.mini_pupper.ESP32Interface import ESP32Interface
 
@@ -28,8 +28,8 @@ class Gesture:
         initial_position = [512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512]  
         esp32.servos_set_position(initial_position)
 
-        msg,counter_a = toggle_activation(counter_a)
-        pub_msg(msg, wait_time)
+        msg,counter_a = helper_movement.toggle_activation(counter_a)
+        helper_movement.pub_msg(msg, wait_time)
 
     #gesture 2 sit
     def sit():
@@ -44,8 +44,8 @@ class Gesture:
             esp32.servos_set_position(leg_positions)
             time.sleep(0.1)
 
-        msg,counter_a = toggle_activation(counter_a)
-        pub_msg(msg, wait_time)
+        msg,counter_a = helper_movement.toggle_activation(counter_a)
+        helper_movement.pub_msg(msg, wait_time)
 
     #gesture 2 give me paw: sit down first, then extend front-left leg outward
     def paw():
@@ -55,8 +55,8 @@ class Gesture:
         #leg_positions = [512, 512, 512, 512, 512, 512, 512, 512, 300, 512, 512, 724]  #change the value that is related t o FL
         #esp32.servos_set_position(leg_positions)
 
-        msg,counter_a = toggle_activation(counter_a)
-        pub_msg(msg, wait_time)
+        msg,counter_a = helper_movement.toggle_activation(counter_a)
+        helper_movement.pub_msg(msg, wait_time)
 
 
 
