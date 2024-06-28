@@ -23,7 +23,6 @@ counter_a = 0
 class Gesture:
 
     def default():
-        global counter_a
         print("Executing default gesture")
         # Starting leg positions
         initial_position = [512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512]
@@ -31,7 +30,6 @@ class Gesture:
         print("Default leg positions set to:", initial_position)
 
     def sit():
-        global counter_a
         print("Executing sit gesture")
         leg_bend = 53
         right_back_leg = 512
@@ -47,8 +45,23 @@ class Gesture:
 
         print("Sit gesture completed")
 
+    def lie_down():
+        print("Executing lie down gesture")
+        leg_bend = 53
+        right_back_leg = 512
+        left_back_leg = 512
+
+        for i in range(4):
+            right_back_leg -= leg_bend
+            left_back_leg += leg_bend
+            leg_positions = [512, 512, right_back_leg, 512, 512, left_back_leg, 512, 512, right_back_leg, 512, 512, left_back_leg]
+            print(f"Setting leg positions (iteration {i}): {leg_positions}")
+            esp32.servos_set_position(leg_positions)
+            time.sleep(0.1)
+
+        print("Lie down gesture completed")
+
     def paw():
-        global counter_a
         print("Executing paw gesture")
         Gesture.default()
 
@@ -63,10 +76,12 @@ print("Pupper activated")
 
 # Call the default gesture to reset to known state
 Gesture.default()
-time.sleep(5)
+time.sleep(3)
 
 # Call the sit gesture
 Gesture.sit()
+time.sleep(3)
 
-time.sleep(5)
+Gesture.lie_down()
+time.sleep(3)
 #Gesture.paw()
