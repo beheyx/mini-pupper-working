@@ -30,7 +30,6 @@ class Gesture:
         print("Default leg positions set to:", initial_position)
 
     def sit():
-        Gesture.default()
         print("Executing sit gesture")
 
         leg_bend = 53
@@ -69,7 +68,7 @@ class Gesture:
         Gesture.default()
         print("Executing excited gesture")
 
-        for _ in range(8):
+        for _ in range(4):
             msg = helper_movement.movement_rx_ry(0.3, 0.3)
             helper_movement.pub_msg(msg,wait_time)
 
