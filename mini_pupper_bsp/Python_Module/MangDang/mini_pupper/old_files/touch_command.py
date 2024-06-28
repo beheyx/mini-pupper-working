@@ -8,7 +8,7 @@ import sounddevice as sd
 import soundfile as sf
 import time
 import os
-from display import Display
+#from display import Display
 from display import BehaviorState
 from mini_pupper_bsp.Python_Module.MangDang.mini_pupper.helper_movement import *
 import time
