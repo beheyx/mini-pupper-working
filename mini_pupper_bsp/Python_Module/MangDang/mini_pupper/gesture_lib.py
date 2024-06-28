@@ -82,6 +82,8 @@ time.sleep(3)
 Gesture.sit()
 time.sleep(3)
 
+Gesture.default()
+time.sleep(1)
 Gesture.lie_down()
 time.sleep(3)
 
