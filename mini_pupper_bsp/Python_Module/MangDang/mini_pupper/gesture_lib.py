@@ -30,8 +30,8 @@ class Gesture:
         initial_position = [512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512]  
         esp32.servos_set_position(initial_position)
 
-        msg,counter_a = helper_movement.toggle_activation(counter_a)
-        helper_movement.pub_msg(msg, wait_time)
+       #msg,counter_a = helper_movement.toggle_activation(counter_a)
+        #helper_movement.pub_msg(msg, wait_time)
 
     #gesture 2 sit
     def sit():
@@ -47,8 +47,8 @@ class Gesture:
             esp32.servos_set_position(leg_positions)
             time.sleep(0.1)
 
-        msg,counter_a = helper_movement.toggle_activation(counter_a)
-        helper_movement.pub_msg(msg, wait_time)
+        #msg,counter_a = helper_movement.toggle_activation(counter_a)
+        #helper_movement.pub_msg(msg, wait_time)
 
     #gesture 2 give me paw: sit down first, then extend front-left leg outward
     def paw():
@@ -60,8 +60,8 @@ class Gesture:
         #leg_positions = [512, 512, 512, 512, 512, 512, 512, 512, 300, 512, 512, 724]  #change the value that is related t o FL
         #esp32.servos_set_position(leg_positions)
 
-        msg,counter_a = helper_movement.toggle_activation(counter_a)
-        helper_movement.pub_msg(msg, wait_time)
+        #msg,counter_a = helper_movement.toggle_activation(counter_a)
+        #helper_movement.pub_msg(msg, wait_time)
 
 
 Gesture.default()
