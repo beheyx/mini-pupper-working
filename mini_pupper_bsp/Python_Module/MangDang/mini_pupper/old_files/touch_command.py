@@ -10,7 +10,7 @@ import time
 import os
 from display import Display
 from display import BehaviorState
-from helper_movement import *
+from mini_pupper_bsp.Python_Module.MangDang.mini_pupper.old_files.helper_movement import *
 import time
 import RPi.GPIO as GPIO
 from MangDang.mini_pupper.ESP32Interface import ESP32Interface
