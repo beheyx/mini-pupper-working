@@ -51,10 +51,9 @@ class Gesture:
         global counter_a
         print("Executing paw gesture")
         Gesture.default()
-        Gesture.sit()
 
         # Uncomment and modify if additional movement for paw gesture is needed
-        leg_positions = [512, 400, 512, 512, 700, 512, 512, 512, 300, 512, 512, 724]
+        leg_positions = [512, 512, 512, 512, 700, 512, 512, 512, 300, 512, 512, 724]
         esp32.servos_set_position(leg_positions)
 
 # Activate the pupper once
