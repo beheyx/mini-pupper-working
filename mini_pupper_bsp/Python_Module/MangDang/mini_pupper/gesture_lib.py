@@ -47,7 +47,6 @@ class Gesture:
 
     def lie_down():
         print("Executing lie down gesture")
-    
         leg_bend = 53
         right_back_leg = 512
         left_back_leg = 512
@@ -61,18 +60,6 @@ class Gesture:
             time.sleep(0.1)
 
         print("Lie down gesture completed")
-
-    def excited():
-        print("Executing excited gesture")
-
-        for _ in range(8):
-            msg = helper_movement.movement_rx_ry(0.3, 0.3)
-            helper_movement.pub_msg(msg,wait_time)
-
-            msg = helper_movement.movement_rx_ry(-0.3,-0.3)
-            helper_movement.pub_msg(msg,wait_time)
-
-        print("Excuting excited gesture completed")
 
     def paw():
         print("Executing paw gesture")
@@ -98,9 +85,8 @@ time.sleep(3)
 Gesture.lie_down()
 time.sleep(3)
 
-Gesture.excited()
-time.sleep(3)
 
 #back to default
 Gesture.default()
+time.sleep(3)
 #Gesture.paw()
