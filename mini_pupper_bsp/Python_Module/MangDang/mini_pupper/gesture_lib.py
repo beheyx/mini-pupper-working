@@ -62,42 +62,27 @@ class Gesture:
         print("Lie down gesture completed")
 
     def excited():
-        print("Executing excited gesture (version 2)")
+        print("Executing excited gesture")
 
         for i in range(4):
-            helper_movement.movement_rx_ry(0.3, 0.3)
-            time.sleep(0.5)  # Adding delay to ensure messages are processed
+            leg_positions = [480, 512, 512, 480, 512, 512, 544, 512, 512, 544, 512, 512]
+            print(f"Setting leg positions (iteration {i}): {leg_positions}")
+            esp32.servos_set_position(leg_positions)
+            time.sleep(0.1)  # Increased delay to 1 second
 
-            helper_movement.movement_rx_ry(-0.3, -0.3)
-            time.sleep(0.5)  # Adding delay to ensure messages are processed
+            leg_positions = [512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512]
+            print(f"Setting leg positions (iteration {i}): {leg_positions}")
+            esp32.servos_set_position(leg_positions)
+            time.sleep(0.1)  # Increased delay to 1 second
 
-        print("Excited gesture (version 2) completed")
-        
-        # Reset to default state after the excited gesture
-        Gesture.default()
+            leg_positions = [544, 512, 512, 544, 512, 512, 480, 512, 512, 480, 512, 512]
+            print(f"Setting leg positions (iteration {i}): {leg_positions}")
+            esp32.servos_set_position(leg_positions)
+            time.sleep(0.1)  # Increased delay to 1 second
 
-    # def excited():
-    #     print("Executing excited gesture")
-
-    #     for i in range(4):
-    #         leg_positions = [500, 512, 512, 500, 512, 512, 524, 512, 512, 524, 512, 512]
-    #         print(f"Setting leg positions (iteration {i}): {leg_positions}")
-    #         esp32.servos_set_position(leg_positions)
-    #         time.sleep(0.1)  # Increased delay to 1 second
-
-    #         leg_positions = [512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512]
-    #         print(f"Setting leg positions (iteration {i}): {leg_positions}")
-    #         esp32.servos_set_position(leg_positions)
-    #         time.sleep(0.1)  # Increased delay to 1 second
-
-    #         leg_positions = [524, 512, 512, 524, 512, 512, 500, 512, 512, 500, 512, 512]
-    #         print(f"Setting leg positions (iteration {i}): {leg_positions}")
-    #         esp32.servos_set_position(leg_positions)
-    #         time.sleep(0.1)  # Increased delay to 1 second
-
-    #     print("Excited gesture completed")
-    #     leg_positions = [512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512]
-    #     esp32.servos_set_position(leg_positions)
+        print("Excited gesture completed")
+        leg_positions = [512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512]
+        esp32.servos_set_position(leg_positions)
 
 
 
