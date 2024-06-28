@@ -63,8 +63,10 @@ print("Pupper activated")
 
 # Call the default gesture to reset to known state
 Gesture.default()
-time.sleep(1)
+time.sleep(5)
 
 # Call the sit gesture
 Gesture.sit()
-Gesture.paw()
+
+time.sleep(5)
+#Gesture.paw()
