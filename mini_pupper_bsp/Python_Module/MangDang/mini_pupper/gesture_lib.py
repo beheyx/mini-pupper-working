@@ -22,6 +22,7 @@ counter_a = 0
 
 class Gesture:
 
+    @staticmethod
     def default():
         print("Executing default gesture")
         # Starting leg positions
@@ -29,6 +30,7 @@ class Gesture:
         esp32.servos_set_position(initial_position)
         print("Default leg positions set to:", initial_position)
 
+    @staticmethod
     def sit():
         print("Executing sit gesture")
 
@@ -46,6 +48,7 @@ class Gesture:
 
         print("Sit gesture completed")
 
+    @staticmethod
     def lie_down():
         print("Executing lie down gesture")
 
@@ -63,18 +66,23 @@ class Gesture:
 
         print("Lie down gesture completed")
 
+    @staticmethod
     def excited():
         print("Executing excited gesture")
 
-        for _ in range(4):
+        for i in range(4):
+            print(f"Excited iteration {i}")
             msg = helper_movement.movement_rx_ry(0.3, 0.3)
-            helper_movement.pub_msg(msg,wait_time)
+            helper_movement.pub_msg(msg, wait_time)
+            time.sleep(0.5)  # Adding delay to ensure messages are processed
 
-            msg = helper_movement.movement_rx_ry(-0.3,-0.3)
-            helper_movement.pub_msg(msg,wait_time)
+            msg = helper_movement.movement_rx_ry(-0.3, -0.3)
+            helper_movement.pub_msg(msg, wait_time)
+            time.sleep(0.5)  # Adding delay to ensure messages are processed
 
-        print("Excuting excited gesture completed")
+        print("Excited gesture completed")
 
+    @staticmethod
     def paw():
         print("Executing paw gesture")
 
@@ -95,7 +103,6 @@ time.sleep(3)
 Gesture.sit()
 time.sleep(3)
 
-
 Gesture.default()
 time.sleep(3)
 Gesture.lie_down()
@@ -106,6 +113,6 @@ time.sleep(3)
 Gesture.excited()
 time.sleep(3)
 
-#back to default
+# Back to default
 Gesture.default()
-#Gesture.paw()
+# Gesture.paw()
