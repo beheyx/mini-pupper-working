@@ -22,7 +22,6 @@ counter_a = 0
 
 class Gesture:
 
-    @staticmethod
     def default():
         print("Executing default gesture")
         # Starting leg positions
@@ -30,7 +29,6 @@ class Gesture:
         esp32.servos_set_position(initial_position)
         print("Default leg positions set to:", initial_position)
 
-    @staticmethod
     def sit():
         print("Executing sit gesture")
 
@@ -48,7 +46,6 @@ class Gesture:
 
         print("Sit gesture completed")
 
-    @staticmethod
     def lie_down():
         print("Executing lie down gesture")
 
@@ -66,23 +63,27 @@ class Gesture:
 
         print("Lie down gesture completed")
 
-    @staticmethod
     def excited():
         print("Executing excited gesture")
 
         for i in range(4):
-            print(f"Excited iteration {i}")
-            msg = helper_movement.movement_rx_ry(0.3, 0.3)
-            helper_movement.pub_msg(msg, wait_time)
-            time.sleep(0.5)  # Adding delay to ensure messages are processed
+            leg_positions = [300, 512, 512, 724, 512, 512, 300, 512, 512, 724, 512, 512]
+            print(f"Setting leg positions (iteration {i}): {leg_positions}")
+            esp32.servos_set_position(leg_positions)
+            time.sleep(0.1)
 
-            msg = helper_movement.movement_rx_ry(-0.3, -0.3)
-            helper_movement.pub_msg(msg, wait_time)
-            time.sleep(0.5)  # Adding delay to ensure messages are processed
+            leg_positions = [512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512]
+            print(f"Setting leg positions (iteration {i}): {leg_positions}")
+            esp32.servos_set_position(leg_positions)
+            time.sleep(0.1)
+
+            leg_positions = [724, 512, 512, 300, 512, 512, 724, 512, 512, 300, 512, 512]
+            print(f"Setting leg positions (iteration {i}): {leg_positions}")
+            esp32.servos_set_position(leg_positions)
+            time.sleep(0.1)
 
         print("Excited gesture completed")
 
-    @staticmethod
     def paw():
         print("Executing paw gesture")
 
@@ -104,12 +105,12 @@ Gesture.sit()
 time.sleep(3)
 
 Gesture.default()
-time.sleep(3)
+time.sleep(1)
 Gesture.lie_down()
 time.sleep(3)
 
 Gesture.default()
-time.sleep(3)
+time.sleep(1)
 Gesture.excited()
 time.sleep(3)
 
