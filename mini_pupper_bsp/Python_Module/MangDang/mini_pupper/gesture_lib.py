@@ -47,7 +47,6 @@ class Gesture:
         print("Sit gesture completed")
 
     def lie_down():
-        Gesture.default()
         print("Executing lie down gesture")
 
         leg_bend = 53
@@ -65,7 +64,6 @@ class Gesture:
         print("Lie down gesture completed")
 
     def excited():
-        Gesture.default()
         print("Executing excited gesture")
 
         for _ in range(4):
@@ -79,7 +77,6 @@ class Gesture:
 
     def paw():
         print("Executing paw gesture")
-        Gesture.default()
 
         # Uncomment and modify if additional movement for paw gesture is needed
         leg_positions = [512, 512, 512, 512, 700, 512, 512, 512, 300, 512, 512, 724]
@@ -98,9 +95,14 @@ time.sleep(3)
 Gesture.sit()
 time.sleep(3)
 
+
+Gesture.default()
+time.sleep(3)
 Gesture.lie_down()
 time.sleep(3)
 
+Gesture.default()
+time.sleep(3)
 Gesture.excited()
 time.sleep(3)
 
