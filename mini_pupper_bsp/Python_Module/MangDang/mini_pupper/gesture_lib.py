@@ -31,7 +31,6 @@ class Gesture:
 
     def sit():
         print("Executing sit gesture")
-
         leg_bend = 53
         right_back_leg = 512
         left_back_leg = 512
@@ -46,10 +45,10 @@ class Gesture:
 
         print("Sit gesture completed")
 
-    @staticmethod
     def lie_down():
         print("Executing lie down gesture")
-
+        Gesture.default()
+        
         leg_bend = 53
         right_back_leg = 512
         left_back_leg = 512
@@ -64,24 +63,21 @@ class Gesture:
 
         print("Lie down gesture completed")
 
-    @staticmethod
     def excited():
         print("Executing excited gesture")
 
-        for i in range(4):
+        for _ in range(8):
             msg = helper_movement.movement_rx_ry(0.3, 0.3)
-            helper_movement.pub_msg(msg, wait_time)
-            time.sleep(0.5)  # Adding delay to ensure messages are processed
+            helper_movement.pub_msg(msg,wait_time)
 
-            msg = helper_movement.movement_rx_ry(-0.3, -0.3)
-            helper_movement.pub_msg(msg, wait_time)
-            time.sleep(0.5)  # Adding delay to ensure messages are processed
+            msg = helper_movement.movement_rx_ry(-0.3,-0.3)
+            helper_movement.pub_msg(msg,wait_time)
 
-        print("Excited gesture completed")
+        print("Excuting excited gesture completed")
 
-    @staticmethod
     def paw():
         print("Executing paw gesture")
+        Gesture.default()
 
         # Uncomment and modify if additional movement for paw gesture is needed
         leg_positions = [512, 512, 512, 512, 700, 512, 512, 512, 300, 512, 512, 724]
@@ -100,16 +96,12 @@ time.sleep(3)
 Gesture.sit()
 time.sleep(3)
 
-Gesture.default()
-time.sleep(3)
 Gesture.lie_down()
 time.sleep(3)
 
-Gesture.default()
-time.sleep(3)
 Gesture.excited()
 time.sleep(3)
 
-# Back to default
+#back to default
 Gesture.default()
-# Gesture.paw()
+#Gesture.paw()
