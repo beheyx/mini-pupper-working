@@ -94,8 +94,8 @@ class Gesture:
         esp32.servos_set_position(leg_positions)
 
 # Activate the pupper once
-# msg, counter_a = helper_movement.toggle_activation(counter_a)
-# helper_movement.pub_msg(msg, wait_time)
+msg, counter_a = helper_movement.toggle_activation(counter_a)
+helper_movement.pub_msg(msg, wait_time)
 print("Pupper activated")
 
 # # Call the default gesture to reset to known state
@@ -106,16 +106,17 @@ print("Pupper activated")
 Gesture.sit()
 time.sleep(3)
 
-Gesture.default()
-time.sleep(1)
+#Gesture.default()
+#time.sleep(1)
 Gesture.lie_down()
-time.sleep(3)
-
-Gesture.default()
-time.sleep(1)
-Gesture.excited()
-time.sleep(3)
+#time.sleep(3)
+msg, counter_a = helper_movement.toggle_activation(counter_a)
+helper_movement.pub_msg(msg, wait_time)
+#Gesture.default()
+#time.sleep(1)
+#Gesture.excited()
+#time.sleep(3)
 
 #back to default
-Gesture.default()
+#Gesture.default()
 #Gesture.paw()

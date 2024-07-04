@@ -796,3 +796,166 @@ ls
 cd ..
 sudo nano /etc/netplan/50-cloud-init.yaml
 sudo reboot
+ls
+git clone https://github.com/beheyx/mini-pupper
+git init
+git remote add origin https://github.com/beheyx/mini-pupper.git
+ls
+git add .
+git log
+cd mini-pupper/
+ls
+cd ..
+rm mini-pupper
+ls
+rm -r mini-pupper
+ls
+git remote add origin https://github.com/beheyx/mini-pupper.git
+git add .
+git commit -m "initial commit"
+git push -u origin main
+git push
+git push --set-upstream origin master
+git remote add origin https://github.com/beheyx/mini-pupper.git
+git branch -M main
+git push -u origin main
+ls
+cd mini_pupper_bsp/
+ls
+cd Python_Module/
+ls
+cd MangDang
+cd mini_pupper/
+ls
+sudo python3 touch_command.py 
+sudo shutdown -h now
+ls
+git pull
+cd mini_pupper_bsp/Python_Module/MangDang/mini_pupper
+ls
+sudo shutdown -h now
+git pull
+cd mini_pupper_bsp/Python_Module/MangDang/mini_pupper
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+sudo systemcdl status robot
+sudo systemctl status robot
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+sudo shutdown -h now
+cd mini_pupper_bsp/Python_Module/MangDang/mini_pupper
+ls
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+cd old_files/
+ls
+sudo python3 touch_command.py 
+git pull
+sudo python3 touch_command.py 
+git pull
+cd ..
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+sudo python3 shutdown -h now
+sudo shutdown -h now
+cd mini_pupper_bsp/Python_Module/MangDang/mini_pupper
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+sudo shutdown -h now
+ls
+cd mini_pupper_bsp/Python_Module/MangDang/mini_pupper/
+ls
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+ls
+nano HardwareInterface.py 
+ls
+nano servo_interface_cj.py 
+cd ~
+ls
+cd PupperCommand/
+ls
+cd ..
+sudo reboot
