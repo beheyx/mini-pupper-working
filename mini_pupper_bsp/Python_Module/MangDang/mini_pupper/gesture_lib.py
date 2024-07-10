@@ -87,9 +87,6 @@ class Gesture:
 
     def paw():
         print("Executing paw gesture")
-#        Gesture.default()
-
-        # Uncomment and modify if additional movement for paw gesture is needed
         leg_positions = [512, 512, 512, 512, 700, 512, 512, 512, 300, 512, 512, 724]
         esp32.servos_set_position(leg_positions)
 
