@@ -41,7 +41,7 @@ class Gesture:
             leg_positions = [512, 512, 512, 512, 512, 512, 512, 512, right_back_leg, 512, 512, left_back_leg]
             print(f"Setting leg positions (iteration {i}): {leg_positions}")
             esp32.servos_set_position(leg_positions)
-            time.sleep(0.1)
+            time.sleep(0.05)
 
         print("Sit gesture completed")
 
@@ -64,21 +64,21 @@ class Gesture:
     def excited():
         print("Executing excited gesture")
 
-        for i in range(4):
-            leg_positions = [470, 512, 512, 470, 512, 512, 470, 512, 512, 470, 512, 512]
+        for i in range(40):
+            leg_positions = [554, 512, 512, 554, 512, 512, 554, 512, 512, 554, 512, 512]
             print(f"Setting leg positions (iteration {i}): {leg_positions}")
             esp32.servos_set_position(leg_positions)
-            time.sleep(0.2)  # Increased delay to 1 second
+            time.sleep(0.05)  # Increased delay to 1 second
 
             leg_positions = [512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512]
             print(f"Setting leg positions (iteration {i}): {leg_positions}")
             esp32.servos_set_position(leg_positions)
-            time.sleep(0.2)  # Increased delay to 1 second
+            time.sleep(0.05)  # Increased delay to 1 second
 
-            leg_positions = [554, 512, 512, 554, 512, 512, 554, 512, 512, 554, 512, 512]
+            leg_positions = [470, 512, 512, 470, 512, 512, 470, 512, 512, 470, 512, 512]
             print(f"Setting leg positions (iteration {i}): {leg_positions}")
             esp32.servos_set_position(leg_positions)
-            time.sleep(0.2)  # Increased delay to 1 second
+            time.sleep(0.05)  # Increased delay to 1 second
 
         print("Excited gesture completed")
         leg_positions = [512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512]
@@ -105,21 +105,21 @@ Gesture.sit()
 time.sleep(3)
 
 # Call lie down gesture
-Gesture.default()
-time.sleep(1)
-Gesture.lie_down()
+#Gesture.default()
+#time.sleep(1)
+#Gesture.lie_down()
 
 # Call excited gesture
-time.sleep(3)
-Gesture.default()
-time.sleep(1)
-Gesture.excited()
+#time.sleep(3)
+#Gesture.default()
+#time.sleep(1)
+#Gesture.excited()
 
 # Call paw gesture
-time.sleep(3)
-Gesture.default()
-time.sleep(1)
-Gesture.paw()
+#time.sleep(3)
+#Gesture.default()
+#time.sleep(1)
+#Gesture.paw()
 
 # Back to default
 time.sleep(3)
