@@ -68,17 +68,17 @@ class Gesture:
             leg_positions = [480, 512, 512, 480, 512, 512, 544, 512, 512, 544, 512, 512]
             print(f"Setting leg positions (iteration {i}): {leg_positions}")
             esp32.servos_set_position(leg_positions)
-            time.sleep(0.1)  # Increased delay to 1 second
+            time.sleep(0.3)  # Increased delay to 1 second
 
             leg_positions = [512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512]
             print(f"Setting leg positions (iteration {i}): {leg_positions}")
             esp32.servos_set_position(leg_positions)
-            time.sleep(0.1)  # Increased delay to 1 second
+            time.sleep(0.3)  # Increased delay to 1 second
 
             leg_positions = [544, 512, 512, 544, 512, 512, 480, 512, 512, 480, 512, 512]
             print(f"Setting leg positions (iteration {i}): {leg_positions}")
             esp32.servos_set_position(leg_positions)
-            time.sleep(0.1)  # Increased delay to 1 second
+            time.sleep(0.3)  # Increased delay to 1 second
 
         print("Excited gesture completed")
         leg_positions = [512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512]
@@ -96,9 +96,7 @@ class Gesture:
         print(f"Setting leg position: {leg_positions}")
         print("Paw gesture completed")
 
-# Activate the pupper once
-#msg, counter_a = helper_movement.toggle_activation(counter_a)
-#helper_movement.pub_msg(msg, wait_time)
+
 print("Pupper activated")
 
 # Call the default gesture to reset to known state
@@ -116,8 +114,6 @@ Gesture.lie_down()
 
 # Call excited gesture
 time.sleep(3)
-#msg, counter_a = helper_movement.toggle_activation(counter_a)
-#helper_movement.pub_msg(msg, wait_time)
 Gesture.default()
 time.sleep(1)
 Gesture.excited()
