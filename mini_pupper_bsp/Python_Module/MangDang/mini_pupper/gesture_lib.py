@@ -87,36 +87,47 @@ class Gesture:
 
     def paw():
         print("Executing paw gesture")
-        Gesture.default()
+#        Gesture.default()
 
         # Uncomment and modify if additional movement for paw gesture is needed
         leg_positions = [512, 512, 512, 512, 700, 512, 512, 512, 300, 512, 512, 724]
         esp32.servos_set_position(leg_positions)
 
+        print(f"Setting leg position: {leg_positions}")
+        print("Paw gesture completed")
+
 # Activate the pupper once
-msg, counter_a = helper_movement.toggle_activation(counter_a)
-helper_movement.pub_msg(msg, wait_time)
+#msg, counter_a = helper_movement.toggle_activation(counter_a)
+#helper_movement.pub_msg(msg, wait_time)
 print("Pupper activated")
 
-# # Call the default gesture to reset to known state
-# Gesture.default()
-# time.sleep(3)
+# Call the default gesture to reset to known state
+Gesture.default()
+time.sleep(3)
 
 # Call the sit gesture
 Gesture.sit()
 time.sleep(3)
 
-#Gesture.default()
-#time.sleep(1)
+# Call lie down gesture
+Gesture.default()
+time.sleep(2)
 Gesture.lie_down()
-#time.sleep(3)
-msg, counter_a = helper_movement.toggle_activation(counter_a)
-helper_movement.pub_msg(msg, wait_time)
-#Gesture.default()
-#time.sleep(1)
-#Gesture.excited()
-#time.sleep(3)
 
-#back to default
-#Gesture.default()
-#Gesture.paw()
+# Call excited gesture
+time.sleep(3)
+#msg, counter_a = helper_movement.toggle_activation(counter_a)
+#helper_movement.pub_msg(msg, wait_time)
+Gesture.default()
+time.sleep(1)
+Gesture.excited()
+
+# Call paw gesture
+time.sleep(3)
+Gesture.default()
+time.sleep(2)
+Gesture.paw()
+
+# Back to default
+time.sleep(3)
+Gesture.default()

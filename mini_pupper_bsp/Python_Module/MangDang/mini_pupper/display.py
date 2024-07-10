@@ -73,4 +73,4 @@ if __name__ == "__main__":
     # disp.show_image('/var/lib/mini_pupper_bsp/test.png')
     # disp.show_state(BehaviorState.REST)
     # disp.show_state(BehaviorState.TROT)
-    # disp.show_state(BehaviorState.LOWBATTERY)
+    disp.show_state(BehaviorState.LOWBATTERY)
