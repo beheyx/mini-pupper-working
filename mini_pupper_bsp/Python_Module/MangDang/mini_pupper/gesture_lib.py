@@ -65,7 +65,7 @@ class Gesture:
         print("Executing excited gesture")
 
         for i in range(4):
-            leg_positions = [470, 512, 512, 470, 512, 512, 554, 512, 512, 554, 512, 512]
+            leg_positions = [470, 512, 512, 470, 512, 512, 470, 512, 512, 470, 512, 512]
             print(f"Setting leg positions (iteration {i}): {leg_positions}")
             esp32.servos_set_position(leg_positions)
             time.sleep(0.2)  # Increased delay to 1 second
@@ -75,7 +75,7 @@ class Gesture:
             esp32.servos_set_position(leg_positions)
             time.sleep(0.2)  # Increased delay to 1 second
 
-            leg_positions = [554, 512, 512, 554, 512, 512, 470, 512, 512, 470, 512, 512]
+            leg_positions = [554, 512, 512, 554, 512, 512, 554, 512, 512, 554, 512, 512]
             print(f"Setting leg positions (iteration {i}): {leg_positions}")
             esp32.servos_set_position(leg_positions)
             time.sleep(0.2)  # Increased delay to 1 second
