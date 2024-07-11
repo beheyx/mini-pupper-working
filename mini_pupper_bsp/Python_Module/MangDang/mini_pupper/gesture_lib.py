@@ -29,19 +29,20 @@ class Gesture:
         esp32.servos_set_position(initial_position)
         print("Default leg positions set to:", initial_position)
 
-    def sit():
+    def sit(speed):
         print("Executing sit gesture")
         leg_bend = 30
         right_back_leg = 512
         left_back_leg = 512
 
+        movement_speed = speed / 4
         for i in range(4):
             right_back_leg -= leg_bend
             left_back_leg += leg_bend
             leg_positions = [512, 512, 512, 512, 512, 512, 512, 512, right_back_leg, 512, 512, left_back_leg]
             print(f"Setting leg positions (iteration {i}): {leg_positions}")
             esp32.servos_set_position(leg_positions)
-            time.sleep(0.05)
+            time.sleep(movement_speed)
 
         print("Sit gesture completed")
 
@@ -139,7 +140,7 @@ Gesture.default()
 time.sleep(3)
 
 # Call the sit gesture
-#Gesture.sit()
+Gesture.sit(4)
 #time.sleep(3)
 
 #Gesture.bow()
