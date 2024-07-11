@@ -77,12 +77,11 @@ class Gesture:
 
         print("bow gesture completed")
 
-    def sniff():
-        print("Executing sniff gesture")
-        Gesture.bow()
-
+    def head_shake():
+        print("Executing head shake gesture")
+        
         for i in range(8):
-            leg_positions = [470, 512, 512, 470, 512, 512, 512, 512, 512, 512, 512, 512]
+            leg_positions = [512, 512, 400, 512, 512, 400, 512, 512, 512, 512, 512, 512]
             print(f"Setting leg positions (iteration {i}): {leg_positions}")
             esp32.servos_set_position(leg_positions)
             time.sleep(0.05)  # Increased delay to 1 second
@@ -92,12 +91,7 @@ class Gesture:
             esp32.servos_set_position(leg_positions)
             time.sleep(0.05)  # Increased delay to 1 second
 
-            leg_positions = [554, 512, 512, 554, 512, 512, 512, 512, 512, 512, 512, 512]
-            print(f"Setting leg positions (iteration {i}): {leg_positions}")
-            esp32.servos_set_position(leg_positions)
-            time.sleep(0.05)  # Increased delay to 1 second
-
-        print("Excited gesture completed")
+        print("Head shake gesture completed")
         leg_positions = [512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512]
         esp32.servos_set_position(leg_positions)
 
@@ -150,7 +144,7 @@ time.sleep(3)
 
 Gesture.default()
 time.sleep(1)
-Gesture.sniff()
+Gesture.head_shake()
 
 # Call lie down gesture
 #Gesture.default()
