@@ -63,7 +63,7 @@ class Gesture:
 
     def bow():
         print("Executing bow gesture")
-        leg_bend = 53
+        leg_bend = 30
         right_front_leg = 512
         left_front_leg = 512
 
