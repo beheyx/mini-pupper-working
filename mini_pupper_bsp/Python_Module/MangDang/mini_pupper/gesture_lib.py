@@ -84,12 +84,12 @@ class Gesture:
             leg_positions = [512, 512, 400, 512, 512, 400, 512, 512, 512, 512, 512, 512]
             print(f"Setting leg positions (iteration {i}): {leg_positions}")
             esp32.servos_set_position(leg_positions)
-            time.sleep(0.05)  # Increased delay to 1 second
+            time.sleep(0.1)  # Increased delay to 1 second
 
             leg_positions = [512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512]
             print(f"Setting leg positions (iteration {i}): {leg_positions}")
             esp32.servos_set_position(leg_positions)
-            time.sleep(0.05)  # Increased delay to 1 second
+            time.sleep(0.1)  # Increased delay to 1 second
 
         print("Head shake gesture completed")
         leg_positions = [512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512]
