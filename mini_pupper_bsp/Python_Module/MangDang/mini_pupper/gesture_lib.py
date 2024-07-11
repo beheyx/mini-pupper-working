@@ -141,12 +141,12 @@ time.sleep(3)
 #Gesture.sit()
 #time.sleep(3)
 
-Gesture.bow()
-time.sleep(3)
+#Gesture.bow()
+#time.sleep(3)
 
-Gesture.default()
-time.sleep(1)
-Gesture.back_shake()
+#Gesture.default()
+#time.sleep(1)
+#Gesture.back_shake()
 
 # Call lie down gesture
 #Gesture.default()
@@ -161,9 +161,9 @@ Gesture.back_shake()
 #time.sleep(3)
 
 # Call paw gesture
-#Gesture.default()
-#time.sleep(1)
-#Gesture.paw()
+Gesture.default()
+time.sleep(1)
+Gesture.paw()
 #time.sleep(3)
 
 # Back to default
