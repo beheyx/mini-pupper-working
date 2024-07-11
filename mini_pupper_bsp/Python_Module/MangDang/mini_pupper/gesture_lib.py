@@ -77,7 +77,9 @@ class Gesture:
 
         print("bow gesture completed")
 
-    def head_shake():
+    # Because front leg is broken, we test it with back leg
+    # For head_shake, just change the leg_positions to [462, 512, 512, 462, 512, 512, 512, 512, 512, 512, 512, 512]
+    def back_shake():  
         print("Executing head shake gesture")
         
         for i in range(8):
@@ -144,7 +146,7 @@ time.sleep(3)
 
 Gesture.default()
 time.sleep(1)
-Gesture.head_shake()
+Gesture.back_shake()
 
 # Call lie down gesture
 #Gesture.default()
