@@ -31,7 +31,7 @@ class Gesture:
 
     def sit():
         print("Executing sit gesture")
-        leg_bend = 53
+        leg_bend = 30
         right_back_leg = 512
         left_back_leg = 512
 
@@ -47,7 +47,7 @@ class Gesture:
 
     def lie_down():
         print("Executing lie down gesture")
-        leg_bend = 53
+        leg_bend = 30
         right_back_leg = 512
         left_back_leg = 512
 
@@ -125,7 +125,7 @@ class Gesture:
     def paw():
         print("Executing paw gesture")
         Gesture.sit()
-        leg_positions = [512, 512, 512, 512, 700, 512, 512, 512, 300, 512, 512, 724]
+        leg_positions = [512, 512, 550, 512, 800, 600, 480, 512, 392, 544, 512, 632]
         esp32.servos_set_position(leg_positions)
 
         print(f"Setting leg position: {leg_positions}")
@@ -162,10 +162,10 @@ time.sleep(3)
 #time.sleep(3)
 
 # Call paw gesture
-Gesture.default()
-time.sleep(1)
-Gesture.paw()
+#Gesture.default()
+#time.sleep(1)
+#Gesture.paw()
 #time.sleep(3)
 
 # Back to default
-Gesture.default()
+#Gesture.default()
