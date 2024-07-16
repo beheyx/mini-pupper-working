@@ -140,7 +140,7 @@ Gesture.default()
 time.sleep(3)
 
 # Call the sit gesture
-Gesture.sit(4)
+Gesture.sit(0.5)
 #time.sleep(3)
 
 #Gesture.bow()
