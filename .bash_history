@@ -959,3 +959,275 @@ cd PupperCommand/
 ls
 cd ..
 sudo reboot
+git add .
+git commit -m "tp"
+git push
+cd mini_pupper_bsp/Python_Module/MangDang/mini_pupper/
+ls
+cd gestu
+nano gesture_lib.py 
+cd old_files/
+ls
+cd ..
+nano display.py 
+sudo python3 display.py 
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+sudo shutdown -h now
+cd mini_pupper_bsp/Python_Module/MangDang/mini_pupper/
+git pull
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+git add.
+git add .
+git commit -m "fixed"
+git push
+sudo python3 gesture_lib.py 
+git pull
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+git add .
+git commit -m ","
+git push
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+sudo shutdown -h now
+nano gesture_lib.py 
+cd mini_pupper_bsp/Python_Module/MangDang/mini_pupper
+sudo shutdown -h now
+cd mini_pupper_bsp/Python_Module/MangDang/mini_pupper
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+git add .
+git commit -m "."
+git push
+cd mini_pupper_bsp/Python_Module/MangDang/mini_pupper
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo python3 gesture_lib.py 
+git pull
+sudo shutdown -h now
+
+cd mini_pupper_bsp/Python_Module/MangDang/mini_pupper/
+ls
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+git add .
+git commit -m "."
+git push
+git pull
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+sudo shutdown -h now
+ls
+cd mini_pupper_bsp/Python_Module/MangDang/mini_pupper/
+ls
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+git add .
+git commit -m ".."
+git push
+git pull
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+sudo python3 gesture_lib.py 
+nano gesture_lib.py 
+sudo shutdown -h now
+ls
+cd mini_pupper_bsp/Python_Module/MangDang/mini_pupper/
+ls
+cd ..
+ls
+cd ..
+ls
+cd PS4Joystick/
+ls
+touch easycontrol.py
+nano easycontrol.py 
+sudo python3 easycontrol.py 
+nano easycontrol.py 
+sudo python3 easycontrol.py 
+nano easycontrol.py 
+sudo python3 easycontrol.py 
+nano easycontrol.py 
+sudo python3 easycontrol.py 
+nano easycontrol.py 
+sudo python3 easycontrol.py 
+nano easycontrol.py 
+sudo python3 easycontrol.py 
+nano easycontrol.py 
+sudo python3 easycontrol.py 
+nano easycontrol.py 
+sudo python3 easycontrol.py 
+nano easycontrol.py 
+sudo python3 easycontrol.py 
+cd ..
+cd mini_pupper_bsp/Python_Module/MangDang/mini_pupper/
+ls
+cd old_files/
+ls
+nano slot_machine.py 
+sudo shutdown -h now
+cd PS4Joystick/
+git add .
+git commit -m "."
+git push
+cd ..
+cd mini_pupper_bsp/Python_Module/MangDang/mini_pupper/
+ls
+touch MovementScheme.py
+nano
+nano MovementScheme.py 
+touch MovementGroup.py
+nano MovementGroup.py 
+git add .
+git commit -m "uploaded the new files"
+git push
+sudo shutdown -h now
+cd mini_pupper_bsp/Python_Module/MangDang/mini_pupper/
+ls
+cd ~
+ls
+cd StanfordQuadruped/
+ls
+cd src
+ls
+sudo python3 IMU.py 
+cd ~
+cd mini_pupper_bsp
+ls
+cd demos
+ls
+sudo python3 haptic-demo.py 
+sudo python3 quaternion_plotter.py 
+sudo apt install ahrs
+exit
+cd mini_pupper_bsp
+ls
+cd demos/
+ls
+cd ..
+./test.sh
+ls
+cd demos
+ls
+sudo apt install requirements.txt
+pip install -r requirements.txt
+sudo python3 requirements.txt
+ls
+sudo python3 quaternion_plotter.py 
+python3 quaternion_plotter.py 
+ls
+sudo python3 haptic-demo.py 
+sudo python3 touch_test.py 
+cd ..
+cd StanfordQuadruped/
+ls
+cd src
+ls
+python3 danceSample.py 
+cd ..
+python3 src/danceSample.py 
+ls
+python3 run_robot.py 
+cd tests
+ls
+cd ..
+ls
+cd pupper/
+ls
+cd ~
+rm -rf StanfordQuadruped/
+sudo rm -rf StanfordQuadruped/
+git clone https://github.com/mangdangroboticsclub/StanfordQuadruped.git
+cd StanfordQuadruped/
+./install.sh 
+ls
+python3 run_danceActionList.py 
+ls
+cd src
+ls
+python3 createDanceActionListSample.py 
+mv createDanceActionListSample.py ../createDanceActionListSample.py
+cd ..
+ls
+python3 createDanceActionListSample.py 
+sudo shutdown -h now
+ls
+PS4Joystick/
+cd PS4Joystick/
+ls
+sudo python3 PS4Joystick.py 
+ls
+sudo shutdown -h now

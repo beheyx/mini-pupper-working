@@ -9,7 +9,8 @@ from MangDang.mini_pupper.Config import Configuration
 from pupper.Kinematics import four_legs_inverse_kinematics
 from MangDang.mini_pupper.display import Display
 from src.MovementScheme import MovementScheme
-from src.danceSample import MovementLib
+from src.createDanceActionListSample import MovementLib
+from src.Command import Command
 
 def main(use_imu=False):
     """Main program
@@ -90,10 +91,13 @@ def main(use_imu=False):
             if dance_active_state == True:
             	# Caculate legsLocation, attitudes and speed using custom movement script
                 movementCtl.runMovementScheme()
-                legsLocation = movementCtl.getMovemenLegsLocation()
-                attitudes    = movementCtl.getMovemenAttitude()
-                speed        = movementCtl.getMovemenSpeed()
-                controller.run(state, command, disp, legsLocation, attitudes, speed)
+                command.horizontal_velocity = movementCtl.getMovemenSpeed()
+                command.legslocation        = movementCtl.getMovemenLegsLocation()
+                command.roll                = movementCtl.attitude_now[0]
+                command.pitch               = movementCtl.attitude_now[1]
+                command.yaw                 = movementCtl.attitude_now[2]
+                command.yaw_rate            = movementCtl.getMovemenTurn()
+                controller.run(state, command, disp)
             else:
                 controller.run(state, command, disp)
 

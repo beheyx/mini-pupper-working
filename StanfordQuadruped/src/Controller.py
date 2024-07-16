@@ -20,10 +20,10 @@ class Controller:
         inverse_kinematics,
     ):
         self.config = config
-        self.dance_active_state = False
 
         self.smoothed_yaw = 0.0  # for REST mode only
         self.inverse_kinematics = inverse_kinematics
+        self.dance_active_state = False
 
         self.contact_modes = np.zeros(4)
         self.gait_controller = GaitController(self.config)
@@ -41,6 +41,10 @@ class Controller:
             else:
                 self.dance_active_state = False
         return True
+
+    def pseudo_dance_active(self, command):
+        if command.pseudo_dance_event == True:
+            self.dance_active_state = True
 
     def step_gait(self, state, command):
         """Calculate the desired foot locations for the next timestep
@@ -71,7 +75,7 @@ class Controller:
         return new_foot_locations, contact_modes
 
 
-    def run(self, state, command, disp,location = np.zeros((3,4)),attitude = [0,0,0],robot_speed = [0,0,0]):
+    def run(self, state, command, disp):
         """Steps the controller forward one timestep
 
         Parameters
@@ -90,6 +94,7 @@ class Controller:
 
         disp.show_state(state.behavior_state)
         self.dance_active(command)
+        self.pseudo_dance_active(command)
 
         if state.behavior_state == BehaviorState.TROT:
             state.foot_locations, contact_modes = self.step_gait(
@@ -155,7 +160,7 @@ class Controller:
                     self.config.default_stance
                     + np.array([0, 0, command.height])[:, np.newaxis]
                  )
-                # Apply the desired body rotation
+                # Apply the desired body rotation and convert degrees to radians by dividing by 57.3
                 rotated_foot_locations = (
                     euler2mat(
                         command.roll,
@@ -168,25 +173,33 @@ class Controller:
                 location_buf = np.zeros((3,4))
                 for index_i in range(3):
                     for index_j in range(4):
-                        location_buf[index_i,index_j] = location[index_i][index_j]
+                        location_buf[index_i,index_j] = command.legslocation[index_i][index_j]
 
-                if (abs(robot_speed[0])<0.01) and (abs(robot_speed[1])<0.01):
+                if (abs(command.horizontal_velocity[0])<0.01) and (abs(command.horizontal_velocity[1])<0.01 and abs(command.yaw_rate ==0)):
                     state.foot_locations = location_buf
                 else:
-
-                    command.horizontal_velocity[0] = robot_speed[0]
-                    command.horizontal_velocity[1] = robot_speed[1]
                     state.foot_locations,contact_modes = self.step_gait(state,command)
 
                 rotated_foot_locations = (
                     euler2mat(
-                        attitude[0],
-                        attitude[1],
-                        attitude[2],
+                        command.roll/57.3,
+                        command.pitch/57.3,
+                        #self.smoothed_yaw,
+                        command.yaw/57.3,
                     )
                     @ state.foot_locations
                 )
 
+            
+ # Construct foot rotation matrix to compensate for body tilt
+            (roll, pitch, yaw) = quat2euler(state.quat_orientation)
+            correction_factor = 0.8
+            max_tilt = 0.4
+            roll_compensation = correction_factor * np.clip(-roll, -max_tilt, max_tilt)
+            pitch_compensation = correction_factor * np.clip(-pitch, -max_tilt, max_tilt)
+            rmat = euler2mat(roll_compensation, pitch_compensation, 0)
+
+            rotated_foot_locations = rmat.T @ rotated_foot_locations
 
             state.joint_angles = self.inverse_kinematics(
                 rotated_foot_locations, self.config
