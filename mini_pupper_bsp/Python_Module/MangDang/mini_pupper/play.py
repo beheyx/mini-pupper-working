@@ -2,7 +2,8 @@
 #from MangDang.mini_pupper.Config import Configuration
 #from MangDang.mini_pupper.display import Display
 #from MangDang.mini_pupper.MovementScheme import MovementScheme
-from mini_pupper_bsp.Python_Module.MangDang.mini_pupper.MovementGroup import MovementGroups
+
+from MangDang.mini_pupper.MovementGroup import MovementGroups
 
 
 Move = MovementGroups()
