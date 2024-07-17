@@ -20,7 +20,7 @@
 #                 Level 3(for beyond): Samples delicately control the foot locations, move speed, and attitudes at each execution time.
 #
 import numpy as np
-from mini_pupper.MovementScheme import Movements
+from MangDang.mini_pupper.MovementScheme import Movements
 
 class MovementGroups:
 
