@@ -3,7 +3,7 @@
 #from MangDang.mini_pupper.display import Display
 #from MangDang.mini_pupper.MovementScheme import MovementScheme
 
-from MangDang.mini_pupper.MovementGroup import MovementGroups
+from MovementGroup import MovementGroups
 
 
 Move = MovementGroups()

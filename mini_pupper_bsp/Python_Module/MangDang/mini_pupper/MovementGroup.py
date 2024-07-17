@@ -21,7 +21,7 @@
 #
 import numpy as np
 
-from MangDang.mini_pupper.MovementScheme import Movements
+from MovementScheme import Movements
 
 class MovementGroups:
 
