@@ -19,3 +19,5 @@ Move.move_left()
 Move.move_backward()
 Move.move_right()
 Move.stop()
+
+MovementLib = Move.MovementLib
