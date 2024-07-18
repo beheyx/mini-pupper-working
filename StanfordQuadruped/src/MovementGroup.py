@@ -658,9 +658,9 @@ class MovementGroups:
         dance_attitude = [[0,20*1.414/2,30*1.414/2],[0,20*0.38268,30*0.92388],[0,0,30],[0,-20*0.38268,30*0.92388],[0,-20*1.414/2,30*1.414/2],[0,-20*0.92388,30*0.38268],[0,-20,0],[0,-20*0.92388,-30*0.38268],[0,-20*1.414/2,-30*1.414/2],[0,-20*0.38268,-30*0.92388],[0,0,-30],[0,20*0.38268,-30*0.92388],[0,20*1.414/2,-30*1.414/2],[0,20*0.92388,-30*0.38268],[0,20,0],[0,20*0.92388,30*0.38268],]         # roll, pitch, yaw
         
         dance_scheme.setInterpolationNumber(15)
-        dance_scheme.setLegsSequence(dance_all_legs,"Multiple",3)
-        dance_scheme.setAttitudeSequence(dance_attitude,"Multiple",3)
-        dance_scheme.setSpeedSequence(dance_speed,"Multiple",3)
+        dance_scheme.setLegsSequence(dance_all_legs,"Multiple",1)
+        dance_scheme.setAttitudeSequence(dance_attitude,"Multiple",1)
+        dance_scheme.setSpeedSequence(dance_speed,"Multiple",1)
         self.MovementLib.append(dance_scheme)      # append dance
 
         return self.MovementLib
