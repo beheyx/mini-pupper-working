@@ -5,8 +5,7 @@ Move = MovementGroups()
 #start, introducing pupper
 #pupper says hello, dance, etc.
 Move.head_ellipse()
-Move.body_row(45, 0.8, 0)
-Move.body_row(-45, 0.8, 0)
+Move.look_up()
 Move.look_down()
 Move.stop()
 
