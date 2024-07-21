@@ -1320,3 +1320,114 @@ cd StanfordQuadruped/
 nano createDanceActionListSample.py 
 sudo python3 createDanceActionListSample.py 
 sudo shutdown -h now
+cd mini_pupper_bsp/Python_Module/MangDang/mini_pupper/
+sudo python3 gesture_lib.py 
+cd ~
+cd StanfordQuadruped/
+sudo python3 createDanceActionListSample.py 
+nano createDanceActionListSample.py 
+sudo python3 run_danceActionList.py 
+nano createDanceActionListSample.py 
+sudo python3 run_danceActionList.py 
+nano createDanceActionListSample.py 
+sudo python3 createDanceActionListSample.py 
+cd StanfordQuadruped/
+sudo python3 createDanceActionListSample.py 
+sudo python3 run_danceActionList.py 
+nano createDanceActionListSample.py 
+sudo python3 run_danceActionList.py 
+nano createDanceActionListSample.py 
+sudo python3 run_danceActionList.py 
+nano createDanceActionListSample.py 
+sudo python3 run_danceActionList.py 
+nano createDanceActionListSample.py 
+sudo python3 run_danceActionList.py 
+nano createDanceActionListSample.py 
+sudo python3 run_danceActionList.py 
+nano createDanceActionListSample.py 
+sudo python3 run_danceActionList.py 
+nano createDanceActionListSample.py 
+sudo python3 run_danceActionList.py 
+nano createDanceActionListSample.py 
+sudo python3 run_danceActionList.py 
+nano createDanceActionListSample.py 
+sudo python3 run_danceActionList.py 
+nano createDanceActionListSample.py 
+sudo python3 run_danceActionList.py 
+nano createDanceActionListSample.py 
+sudo python3 run_danceActionList.py 
+nano createDanceActionListSample.py 
+sudo python3 run_danceActionList.py 
+nano createDanceActionListSample.py 
+sudo python3 run_danceActionList.py 
+nano createDanceActionListSample.py 
+sudo python3 run_danceActionList.py 
+nano createDanceActionListSample.py 
+sudo python3 run_danceActionList.py 
+nano createDanceActionListSample.py 
+sudo python3 run_danceActionList.py 
+nano createDanceActionListSample.py 
+sudo python3 run_danceActionList.py 
+nano createDanceActionListSample.py 
+sudo python3 run_danceActionList.py 
+nano createDanceActionListSample.py 
+sudo python3 run_danceActionList.py 
+nano createDanceActionListSample.py 
+sudo python3 run_danceActionList.py 
+nano createDanceActionListSample.py 
+sudo python3 run_danceActionList.py 
+git add .
+git commit -m "."
+git push
+ifconfig
+git add .
+git commit -m "..."
+git push
+cd ..
+git push
+git pull
+cd StanfordQuadruped/
+nano run_danceActionList.py 
+nano createDanceActionListSample.py 
+cd ..
+git add .
+git commit -m "."
+git push
+git pull
+git config pull.rebase false
+git pull
+cd StanfordQuadruped/
+nano createDanceActionListSample.py 
+sudo python3 run_danceActionList.py 
+cd ..
+git add .
+git commit -m "."
+git push
+sudo shutdown -h now
+git pull
+cd StanfordQuadruped/
+sudo python3 run_script.py 
+git pull
+cd ..
+git pull
+cd StanfordQuadruped/
+sudo python3 run_script.py 
+cd ..
+git pull
+cd StanfordQuadruped/
+sudo python3 run_script.py 
+cd ..
+git pull
+cd StanfordQuadruped/
+sudo python3 run_script.py 
+cd ..
+git pull
+cd StanfordQuadruped/
+sudo python3 run_script.py 
+cd ..
+git pull
+cd StanfordQuadruped/
+sudo python3 run_script.py 
+cd ..
+git pull
+sudo shutdown -h now
