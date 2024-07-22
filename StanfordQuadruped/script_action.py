@@ -10,6 +10,7 @@ Move = MovementGroups()
 # Move.stop()
 
 start_pupper = True
+MovementLib = Move.MovementLib
 
 list_of_commands = {
     #asic movement: wasd keys
@@ -36,7 +37,6 @@ while start_pupper:
         print(f"Executing action: {action}")
         calling_action = list_of_commands[action]
         calling_action()  #calls the correct action
-        MovementLib = Move.MovementLib
 
     else:
         Move.body_row(30)
