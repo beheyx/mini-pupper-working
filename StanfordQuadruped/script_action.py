@@ -42,6 +42,6 @@ while start_pupper:
         print("Invalid action, pupper is confused")
 
 
-MovementLib = Move.MovementLib
+    MovementLib = Move.MovementLib
 
 
