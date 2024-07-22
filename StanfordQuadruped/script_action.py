@@ -4,7 +4,7 @@ Move = MovementGroups()
 
 # Start, introducing pupper
 # Pupper says hello, dance, etc.
-Move.head_ellipse()
+#Move.head_ellipse()
 # Move.look_up()
 # Move.look_down()
 # Move.stop()
@@ -36,12 +36,13 @@ while start_pupper:
         print(f"Executing action: {action}")
         calling_action = list_of_commands[action]
         calling_action()  #calls the correct action
+        MovementLib = Move.MovementLib
 
     else:
         Move.body_row(30)
         print("Invalid action, pupper is confused")
 
 
-    MovementLib = Move.MovementLib
+    
 
 
