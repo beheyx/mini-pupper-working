@@ -43,4 +43,4 @@ Move.head_ellipse()
 #         print("Invalid action, pupper is confused")
 
 
-# MovementLib = Move.MovementLib
+MovementLib = Move.MovementLib
