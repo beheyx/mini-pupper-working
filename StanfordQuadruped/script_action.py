@@ -10,7 +10,7 @@ Move = MovementGroups()
 # Move.stop()
 
 start_pupper = True
-#MovementLib = Move.MovementLib
+MovementLib = Move.MovementLib
 
 list_of_commands = {
     #asic movement: wasd keys
@@ -26,21 +26,40 @@ list_of_commands = {
     "look left": Move.look_left
 }
 
-while start_pupper:
-    action = input("Next move (type 'exit' to quit): ")
-
-    if action == "exit":
-        start_pupper = False
-        print("Pupper stopped.")
+#while start_pupper:
+action = input("Next move (type 'exit' to quit): ")
+if action == "exit":
+    start_pupper = False
+    print("Pupper stopped.")
     
-    elif action in list_of_commands:
-        print(f"Executing action: {action}")
-        calling_action = list_of_commands[action]
-        calling_action()  #calls the correct action
+elif action in list_of_commands:
+    print(f"Executing action: {action}")
+    calling_action = list_of_commands[action]
+    calling_action()  #calls the correct action
 
-    else:
-        Move.body_row(30)
-        print("Invalid action, pupper is confused")
+else:
+    Move.body_row(30)
+    print("Invalid action, pupper is confused")
+
+MovementLib = Move.MovementLib
+
+action = input("Next move (type 'exit' to quit): ")
+if action == "exit":
+    start_pupper = False
+    print("Pupper stopped.")
+    
+elif action in list_of_commands:
+    print(f"Executing action: {action}")
+    calling_action = list_of_commands[action]
+    calling_action()  #calls the correct action
+
+else:
+    Move.body_row(30)
+    print("Invalid action, pupper is confused")
+MovementLib = Move.MovementLib
+
+
+
 
 
     
