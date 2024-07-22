@@ -10,14 +10,14 @@ Move = MovementGroups()
 # Move.stop()
 
 start_pupper = True
-MovementLib = Move.MovementLib
+#MovementLib = Move.MovementLib
 
 list_of_commands = {
     #asic movement: wasd keys
     "w": Move.move_forward,
     "s": Move.move_backward,
-    "a": lambda: Move.rotate(10),   #turn left 10 degrees
-    "d": lambda: Move.rotate(-10),  #turn right 10 degrees
+    "a": Move.rotate(10),   #turn left 10 degrees
+    "d": Move.rotate(-10),  #turn right 10 degrees
 
     #look movements: string input
     "look up": Move.look_up,
