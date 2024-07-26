@@ -8,7 +8,7 @@ from MangDang.mini_pupper.Config import Configuration
 from pupper.Kinematics import four_legs_inverse_kinematics
 from MangDang.mini_pupper.display import Display
 from src.MovementScheme import MovementScheme
-from script_action import MovementLib, get_user_action
+from script_action import MovementLibrary, get_user_action
 from src.Command import Command
 
 def main(use_imu=False):
@@ -33,9 +33,9 @@ def main(use_imu=False):
     state = State()
 
     # Create movement group scheme instance and set a default True state
-    movementCtl = MovementScheme(MovementLib)  # Pass a list of movement functions
+    movementCtl = MovementScheme(MovementLibrary)  # Pass a list of movement functions
     dance_active_state = True
-    lib_length = len(MovementLib)
+    lib_length = len(MovementLibrary)
 
     last_loop = time.time()
 
@@ -79,8 +79,9 @@ def main(use_imu=False):
         if action == "exit":
             break
         elif action:
-            command_action = MovementLib.get(action)
+            command_action = MovementLibrary.get(action)
             if command_action:
                 command_action()
-#..
+
+                
 main()

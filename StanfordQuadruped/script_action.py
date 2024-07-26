@@ -3,7 +3,7 @@ from src.MovementGroup import MovementGroups
 Move = MovementGroups()
 
 # Define the movement library
-MovementLib = {
+MovementLibrary = {
     "w": Move.move_forward,
     "s": Move.move_backward,
     "a": Move.rotate(10),   # turn left 10 degrees
@@ -19,7 +19,7 @@ def get_user_action():
     if action == "exit":
         print("Pupper stopped.")
         return "exit"
-    if action not in MovementLib:
+    if action not in MovementLibrary:
         Move.body_row(30)
         print("Invalid action, pupper is confused")
         return None
