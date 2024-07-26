@@ -2,44 +2,26 @@ from src.MovementGroup import MovementGroups
 
 Move = MovementGroups()
 
-# Start, introducing pupper
-# Pupper says hello, dance, etc.
-#Move.head_ellipse()
-# Move.look_up()
-# Move.look_down()
-# Move.stop()
-
-start_pupper = True
-MovementLib = Move.MovementLib
-
-list_of_commands = {
-    #asic movement: wasd keys
+# Define the movement library
+MovementLib = {
     "w": Move.move_forward,
     "s": Move.move_backward,
-    "a": Move.rotate(10),   #turn left 10 degrees
-    "d": Move.rotate(-10),  #turn right 10 degrees
-
-    #look movements: string input
+    "a": Move.rotate(10),   # turn left 10 degrees
+    "d": Move.rotate(-10),  # turn right 10 degrees
     "look up": Move.look_up,
     "look down": Move.look_down,
     "look right": Move.look_right,
-    "look left": Move.look_left
+    "look left": Move.look_left,
 }
 
-while start_pupper:
+def get_user_action():
+    """Get user input for the next action"""
     action = input("Next move (type 'exit' to quit): ")
     if action == "exit":
-        start_pupper = False
         print("Pupper stopped.")
-        
-    elif action in list_of_commands:
-        print(f"Executing action: {action}")
-        calling_action = list_of_commands[action]
-        print(calling_action)
-        calling_action()  #calls the correct action
-
-    else:
+        return "exit"
+    if action not in MovementLib:
         Move.body_row(30)
         print("Invalid action, pupper is confused")
-
-
+        return None
+    return action

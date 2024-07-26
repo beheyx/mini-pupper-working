@@ -8,12 +8,11 @@ from MangDang.mini_pupper.Config import Configuration
 from pupper.Kinematics import four_legs_inverse_kinematics
 from MangDang.mini_pupper.display import Display
 from src.MovementScheme import MovementScheme
-from script_action import MovementLib
+from script_action import MovementLib, get_user_action
 from src.Command import Command
 
 def main(use_imu=False):
-    """Main program
-    """
+    """Main program"""
 
     # Create config
     config = Configuration()
@@ -22,8 +21,8 @@ def main(use_imu=False):
     disp.show_ip()
 
     # Create imu handle
-    if use_imu:
-        imu = IMU(port="/dev/ttyACM0")
+    imu = IMU(port="/dev/ttyACM0") if use_imu else None
+    if imu:
         imu.flush_buffer()
 
     # Create controller and user input handles
@@ -33,7 +32,7 @@ def main(use_imu=False):
     )
     state = State()
 
-    #Create movement group scheme instance and set a default True state
+    # Create movement group scheme instance and set a default True state
     movementCtl = MovementScheme(MovementLib)
     dance_active_state = True
     lib_length = len(MovementLib)
@@ -47,7 +46,7 @@ def main(use_imu=False):
         now = time.time()
         if now - last_loop < config.dt:
             continue
-        last_loop = time.time()
+        last_loop = now
 
         # Read imu data. Orientation will be None if no data was available
         quat_orientation = (
@@ -56,24 +55,32 @@ def main(use_imu=False):
         state.quat_orientation = quat_orientation
 
         # Step the controller forward by dt
-        if dance_active_state == True:
-            # Caculate legsLocation, attitudes and speed using custom movement script
+        if dance_active_state:
+            # Calculate legsLocation, attitudes and speed using custom movement script
             movementCtl.runMovementScheme()
-            command.legslocation        = movementCtl.getMovemenLegsLocation()
+            command.legslocation = movementCtl.getMovemenLegsLocation()
             command.horizontal_velocity = movementCtl.getMovemenSpeed()
-            command.roll                = movementCtl.attitude_now[0]
-            command.pitch               = movementCtl.attitude_now[1]
-            command.yaw                 = movementCtl.attitude_now[2]
-            command.yaw_rate            = movementCtl.getMovemenTurn()
+            command.roll = movementCtl.attitude_now[0]
+            command.pitch = movementCtl.attitude_now[1]
+            command.yaw = movementCtl.attitude_now[2]
+            command.yaw_rate = movementCtl.getMovemenTurn()
             controller.run(state, command, disp)
         else:
             controller.run(state, command, disp)
-        if movementCtl.movement_now_number >= lib_length - 1 and movementCtl.tick >= movementCtl.now_ticks:
-            print("exit the process")
-            break
 
+        if movementCtl.movement_now_number >= lib_length - 1 and movementCtl.tick >= movementCtl.now_ticks:
+            print("Exit the process")
+            break
 
         # Update the pwm widths going to the servos
         hardware_interface.set_actuator_postions(state.joint_angles)
+
+        action = get_user_action()
+        if action == "exit":
+            break
+        elif action:
+            command_action = MovementLib.get(action)
+            if command_action:
+                command_action()
 
 main()
