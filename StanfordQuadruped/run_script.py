@@ -10,7 +10,7 @@ from pupper.Kinematics import four_legs_inverse_kinematics
 from MangDang.mini_pupper.display import Display
 from src.MovementScheme import MovementScheme
 from src.Command import Command
-from src.MovementGroup import Move
+from src.MovementGroup import MovementGroups
 
 def get_user_input():
     """Function to get user input in a separate thread"""
@@ -76,14 +76,14 @@ def main(use_imu=False):
 command_queue = []
 
 command_mapping = {
-    "w": lambda cmd: Move.move_forward(cmd),
-    "s": lambda cmd: Move.move_backward(cmd),
-    "a": lambda cmd: Move.rotate(10, cmd),
-    "d": lambda cmd: Move.rotate(-10, cmd),
-    "look up": lambda cmd: Move.look_up(cmd),
-    "look down": lambda cmd: Move.look_down(cmd),
-    "look right": lambda cmd: Move.look_right(cmd),
-    "look left": lambda cmd: Move.look_left(cmd)
+    "w": lambda cmd: MovementGroups.move_forward(cmd),
+    "s": lambda cmd: MovementGroups.move_backward(cmd),
+    "a": lambda cmd: MovementGroups.rotate(10, cmd),
+    "d": lambda cmd: MovementGroups.rotate(-10, cmd),
+    "look up": lambda cmd: MovementGroups.look_up(cmd),
+    "look down": lambda cmd: MovementGroups.look_down(cmd),
+    "look right": lambda cmd: MovementGroups.look_right(cmd),
+    "look left": lambda cmd: MovementGroups.look_left(cmd)
 }
 
 main()
