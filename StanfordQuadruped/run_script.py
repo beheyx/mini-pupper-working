@@ -13,7 +13,6 @@ from src.Command import Command
 from src.MovementGroup import MovementGroups
 
 def get_user_input():
-    """Function to get user input in a separate thread"""
     while True:
         command = input("Enter command: ")
         if command in command_mapping:
@@ -76,14 +75,14 @@ def main(use_imu=False):
 command_queue = []
 
 command_mapping = {
-    "w": lambda cmd: MovementGroups.move_forward(cmd),
-    "s": lambda cmd: MovementGroups.move_backward(cmd),
-    "a": lambda cmd: MovementGroups.rotate(10, cmd),
-    "d": lambda cmd: MovementGroups.rotate(-10, cmd),
-    "look up": lambda cmd: MovementGroups.look_up(cmd),
-    "look down": lambda cmd: MovementGroups.look_down(cmd),
-    "look right": lambda cmd: MovementGroups.look_right(cmd),
-    "look left": lambda cmd: MovementGroups.look_left(cmd)
+    "w": lambda: MovementGroups.move_forward(),
+    "s": lambda: MovementGroups.move_backward(),
+    "a": lambda: MovementGroups.rotate(10),
+    "d": lambda: MovementGroups.rotate(-10),
+    "look up": lambda: MovementGroups.look_up(),
+    "look down": lambda: MovementGroups.look_down(),
+    "look right": lambda: MovementGroups.look_right(),
+    "look left": lambda: MovementGroups.look_left()
 }
 
 main()
