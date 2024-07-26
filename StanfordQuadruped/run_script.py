@@ -33,7 +33,7 @@ def main(use_imu=False):
     state = State()
 
     # Create movement group scheme instance and set a default True state
-    movementCtl = MovementScheme(MovementLib)
+    movementCtl = MovementScheme(list(MovementLib.values()))  # Pass a list of movement functions
     dance_active_state = True
     lib_length = len(MovementLib)
 
