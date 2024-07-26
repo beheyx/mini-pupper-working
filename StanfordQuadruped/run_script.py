@@ -63,7 +63,7 @@ def main(use_imu=False):
         # Check if there is a command in the queue
         if command_queue:
             user_command = command_queue.pop(0)
-            command_mapping[user_command](command)
+            command_mapping[user_command]()
 
         # Step the controller forward by dt
         controller.run(state, command, disp)
