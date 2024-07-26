@@ -15,7 +15,6 @@ MovementLib = {
 }
 
 def get_user_action():
-    """Get user input for the next action"""
     action = input("Next move (type 'exit' to quit): ")
     if action == "exit":
         print("Pupper stopped.")
