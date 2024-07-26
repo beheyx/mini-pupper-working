@@ -8,6 +8,7 @@ from MangDang.mini_pupper.Config import Configuration
 from pupper.Kinematics import four_legs_inverse_kinematics
 from MangDang.mini_pupper.display import Display
 from src.MovementScheme import MovementScheme
+from src.MovementGroup import MovementGroups  # New import
 from script_action import MovementLib
 from src.Command import Command
 
@@ -33,10 +34,29 @@ def main(use_imu=False):
     )
     state = State()
 
-    #Create movement group scheme instance and set a default True state
+    # Create movement group scheme instance and set a default True state
     movementCtl = MovementScheme(MovementLib)
     dance_active_state = True
     lib_length = len(MovementLib)
+
+    # New movement groups setup
+    Move = MovementGroups()
+    start_pupper = True
+    MovementLib = Move.MovementLib
+
+    list_of_commands = {
+        # Basic movement: wasd keys
+        "w": Move.move_forward,
+        "s": Move.move_backward,
+        "a": Move.rotate(10),  # turn left 10 degrees
+        "d": Move.rotate(-10),  # turn right 10 degrees
+
+        # Look movements: string input
+        "look up": Move.look_up,
+        "look down": Move.look_down,
+        "look right": Move.look_right,
+        "look left": Move.look_left
+    }
 
     last_loop = time.time()
 
@@ -56,24 +76,38 @@ def main(use_imu=False):
         state.quat_orientation = quat_orientation
 
         # Step the controller forward by dt
-        if dance_active_state == True:
-            # Caculate legsLocation, attitudes and speed using custom movement script
+        if dance_active_state:
+            # Calculate legsLocation, attitudes, and speed using custom movement script
             movementCtl.runMovementScheme()
-            command.legslocation        = movementCtl.getMovemenLegsLocation()
+            command.legslocation = movementCtl.getMovemenLegsLocation()
             command.horizontal_velocity = movementCtl.getMovemenSpeed()
-            command.roll                = movementCtl.attitude_now[0]
-            command.pitch               = movementCtl.attitude_now[1]
-            command.yaw                 = movementCtl.attitude_now[2]
-            command.yaw_rate            = movementCtl.getMovemenTurn()
+            command.roll = movementCtl.attitude_now[0]
+            command.pitch = movementCtl.attitude_now[1]
+            command.yaw = movementCtl.attitude_now[2]
+            command.yaw_rate = movementCtl.getMovemenTurn()
             controller.run(state, command, disp)
         else:
             controller.run(state, command, disp)
+        
         if movementCtl.movement_now_number >= lib_length - 1 and movementCtl.tick >= movementCtl.now_ticks:
             print("exit the process")
             break
 
-
         # Update the pwm widths going to the servos
         hardware_interface.set_actuator_postions(state.joint_angles)
+
+        # Handle user input for additional movements
+        if start_pupper:
+            action = input("Next move (type 'exit' to quit): ")
+            if action == "exit":
+                start_pupper = False
+                print("Pupper stopped.")
+            elif action in list_of_commands:
+                print(f"Executing action: {action}")
+                calling_action = list_of_commands[action]
+                calling_action()  # Calls the correct action
+            else:
+                Move.body_row(30)
+                print("Invalid action, pupper is confused")
 
 main()
