@@ -86,15 +86,15 @@ command_queue = []
 movement_groups = MovementGroups()
 
 command_mapping = {
-    "w": movement_groups.move_forward,
-    "s": movement_groups.move_backward,
+    "w": movement_groups.move_forward(),
+    "s": movement_groups.move_backward(),
     "a": lambda: movement_groups.rotate(10),
     "d": lambda: movement_groups.rotate(-10),
-    "look up": movement_groups.look_up,
-    "look down": movement_groups.look_down,
-    "look right": movement_groups.look_right,
-    "look left": movement_groups.look_left,
-    "exit": movement_groups.stop
+    "look up": movement_groups.look_up(),
+    "look down": movement_groups.look_down(),
+    "look right": movement_groups.look_right(),
+    "look left": movement_groups.look_left(),
+    "exit": movement_groups.stop()
 }
 
 main()
