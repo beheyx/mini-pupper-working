@@ -33,7 +33,7 @@ def main(use_imu=False):
     state = State()
 
     # Create movement group scheme instance and set a default True state
-    movementCtl = MovementScheme(list(MovementLib.values()))  # Pass a list of movement functions
+    movementCtl = MovementScheme(MovementLib)  # Pass a list of movement functions
     dance_active_state = True
     lib_length = len(MovementLib)
 
@@ -46,7 +46,7 @@ def main(use_imu=False):
         now = time.time()
         if now - last_loop < config.dt:
             continue
-        last_loop = now
+        last_loop = time.time()
 
         # Read imu data. Orientation will be None if no data was available
         quat_orientation = (
