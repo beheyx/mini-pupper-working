@@ -43,6 +43,9 @@ def main(use_imu=False):
 
     command = Command()
 
+    # Create an instance of MovementGroups
+    movement_groups = MovementGroups()
+
     # Start a separate thread to get user input
     input_thread = threading.Thread(target=get_user_input)
     input_thread.daemon = True
@@ -74,15 +77,17 @@ def main(use_imu=False):
 # Command queue and mapping
 command_queue = []
 
+movement_groups = MovementGroups()
+
 command_mapping = {
-    "w": lambda: MovementGroups.move_forward(),
-    "s": lambda: MovementGroups.move_backward(),
-    "a": lambda: MovementGroups.rotate(10),
-    "d": lambda: MovementGroups.rotate(-10),
-    "look up": lambda: MovementGroups.look_up(),
-    "look down": lambda: MovementGroups.look_down(),
-    "look right": lambda: MovementGroups.look_right(),
-    "look left": lambda: MovementGroups.look_left()
+    "w": lambda: movement_groups.move_forward(),
+    "s": lambda: movement_groups.move_backward(),
+    "a": lambda: movement_groups.rotate(10),
+    "d": lambda: movement_groups.rotate(-10),
+    "look up": lambda: movement_groups.look_up(),
+    "look down": lambda: movement_groups.look_down(),
+    "look right": lambda: movement_groups.look_right(),
+    "look left": lambda: movement_groups.look_left()
 }
 
 main()
