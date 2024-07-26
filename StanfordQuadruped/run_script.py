@@ -10,7 +10,7 @@ from pupper.Kinematics import four_legs_inverse_kinematics
 from MangDang.mini_pupper.display import Display
 from src.MovementScheme import MovementScheme
 from src.Command import Command
-from src.Move import Move
+from src.MovementGroup import Move
 
 def get_user_input():
     """Function to get user input in a separate thread"""
