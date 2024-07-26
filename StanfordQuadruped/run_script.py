@@ -1,5 +1,6 @@
 import numpy as np
 import time
+import threading
 from src.IMU import IMU
 from src.Controller import Controller
 from src.State import State
@@ -8,13 +9,18 @@ from MangDang.mini_pupper.Config import Configuration
 from pupper.Kinematics import four_legs_inverse_kinematics
 from MangDang.mini_pupper.display import Display
 from src.MovementScheme import MovementScheme
-from src.MovementGroup import MovementGroups  # New import
-from script_action import MovementLib as ScriptMovementLib  # Ensure MovementLib is imported correctly
 from src.Command import Command
+from src.Move import Move
+
+def get_user_input():
+    """Function to get user input in a separate thread"""
+    while True:
+        command = input("Enter command: ")
+        if command in command_mapping:
+            command_queue.append(command)
 
 def main(use_imu=False):
-    """Main program
-    """
+    """Main program"""
 
     # Create config
     config = Configuration()
@@ -34,34 +40,14 @@ def main(use_imu=False):
     )
     state = State()
 
-    # New movement groups setup
-    Move = MovementGroups()
-    start_pupper = True
-    MovementLib = Move.MovementLib
-
-    list_of_commands = {
-        # Basic movement: wasd keys
-        "w": Move.move_forward,
-        "s": Move.move_backward,
-        "a": lambda: Move.rotate(10),  # turn left 10 degrees
-        "d": lambda: Move.rotate(-10),  # turn right 10 degrees
-
-        # Look movements: string input
-        "look up": Move.look_up,
-        "look down": Move.look_down,
-        "look right": Move.look_right,
-        "look left": Move.look_left
-    }
-
-    # Create movement group scheme instance and set a default True state
-    movementCtl = MovementScheme(ScriptMovementLib)  # Use the imported MovementLib
-    dance_active_state = True
-    lib_length = len(ScriptMovementLib)  # Use the imported MovementLib
-
     last_loop = time.time()
 
     command = Command()
-    command.pseudo_dance_event = True
+
+    # Start a separate thread to get user input
+    input_thread = threading.Thread(target=get_user_input)
+    input_thread.daemon = True
+    input_thread.start()
 
     while True:
         now = time.time()
@@ -75,39 +61,29 @@ def main(use_imu=False):
         )
         state.quat_orientation = quat_orientation
 
+        # Check if there is a command in the queue
+        if command_queue:
+            user_command = command_queue.pop(0)
+            command_mapping[user_command](command)
+
         # Step the controller forward by dt
-        if dance_active_state:
-            # Calculate legsLocation, attitudes, and speed using custom movement script
-            movementCtl.runMovementScheme()
-            command.legslocation = movementCtl.getMovemenLegsLocation()
-            command.horizontal_velocity = movementCtl.getMovemenSpeed()
-            command.roll = movementCtl.attitude_now[0]
-            command.pitch = movementCtl.attitude_now[1]
-            command.yaw = movementCtl.attitude_now[2]
-            command.yaw_rate = movementCtl.getMovemenTurn()
-            controller.run(state, command, disp)
-        else:
-            controller.run(state, command, disp)
-        
-        if movementCtl.movement_now_number >= lib_length - 1 and movementCtl.tick >= movementCtl.now_ticks:
-            print("exit the process")
-            break
+        controller.run(state, command, disp)
 
         # Update the pwm widths going to the servos
         hardware_interface.set_actuator_postions(state.joint_angles)
 
-        # Handle user input for additional movements
-        if start_pupper:
-            action = input("Next move (type 'exit' to quit): ")
-            if action == "exit":
-                start_pupper = False
-                print("Pupper stopped.")
-            elif action in list_of_commands:
-                print(f"Executing action: {action}")
-                calling_action = list_of_commands[action]
-                calling_action()  # Calls the correct action
-            else:
-                Move.body_row(30)
-                print("Invalid action, pupper is confused")
+# Command queue and mapping
+command_queue = []
+
+command_mapping = {
+    "w": lambda cmd: Move.move_forward(cmd),
+    "s": lambda cmd: Move.move_backward(cmd),
+    "a": lambda cmd: Move.rotate(10, cmd),
+    "d": lambda cmd: Move.rotate(-10, cmd),
+    "look up": lambda cmd: Move.look_up(cmd),
+    "look down": lambda cmd: Move.look_down(cmd),
+    "look right": lambda cmd: Move.look_right(cmd),
+    "look left": lambda cmd: Move.look_left(cmd)
+}
 
 main()
