@@ -67,7 +67,15 @@ def main(use_imu=False):
         if command_queue:
             user_command = command_queue.pop(0)
             command_mapping[user_command]()
+            print("Exectuing action: {command_queue}")
 
+        elif command_queue == "exit":
+            print("Pupper stopped")
+            return False
+
+        else:
+            print("Pupper is confused...")
+            movement_groups.body_row(30)
         # Step the controller forward by dt
         controller.run(state, command, disp)
 
@@ -87,7 +95,9 @@ command_mapping = {
     "look up": lambda: movement_groups.look_up(),
     "look down": lambda: movement_groups.look_down(),
     "look right": lambda: movement_groups.look_right(),
-    "look left": lambda: movement_groups.look_left()
+    "look left": lambda: movement_groups.look_left(),
+
+    "exit": lambda: movement_groups.stop()
 }
 
 main()
