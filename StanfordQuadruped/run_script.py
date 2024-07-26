@@ -9,7 +9,7 @@ from pupper.Kinematics import four_legs_inverse_kinematics
 from MangDang.mini_pupper.display import Display
 from src.MovementScheme import MovementScheme
 from src.MovementGroup import MovementGroups  # New import
-from script_action import MovementLib
+from script_action import MovementLib as ScriptMovementLib  # Ensure MovementLib is imported correctly
 from src.Command import Command
 
 def main(use_imu=False):
@@ -34,11 +34,6 @@ def main(use_imu=False):
     )
     state = State()
 
-    # Create movement group scheme instance and set a default True state
-    movementCtl = MovementScheme(MovementLib)
-    dance_active_state = True
-    lib_length = len(MovementLib)
-
     # New movement groups setup
     Move = MovementGroups()
     start_pupper = True
@@ -57,6 +52,11 @@ def main(use_imu=False):
         "look right": Move.look_right,
         "look left": Move.look_left
     }
+
+    # Create movement group scheme instance and set a default True state
+    movementCtl = MovementScheme(ScriptMovementLib)  # Use the imported MovementLib
+    dance_active_state = True
+    lib_length = len(ScriptMovementLib)  # Use the imported MovementLib
 
     last_loop = time.time()
 
