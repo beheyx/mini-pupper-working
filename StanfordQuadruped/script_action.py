@@ -6,8 +6,8 @@ Move = MovementGroups()
 MovementLib = {
     "w": Move.move_forward,
     "s": Move.move_backward,
-    "a": Move.rotate(10),   # turn left 10 degrees
-    "d": Move.rotate(-10),  # turn right 10 degrees
+    "a": lambda: Move.rotate(10)(),   # turn left 10 degrees
+    "d": lambda: Move.rotate(-10)(),  # turn right 10 degrees
     "look up": Move.look_up,
     "look down": Move.look_down,
     "look right": Move.look_right,
@@ -15,6 +15,7 @@ MovementLib = {
 }
 
 def get_user_action():
+    """Get user input for the next action"""
     action = input("Next move (type 'exit' to quit): ")
     if action == "exit":
         print("Pupper stopped.")
