@@ -8,7 +8,6 @@ from MangDang.mini_pupper.HardwareInterface import HardwareInterface
 from MangDang.mini_pupper.Config import Configuration
 from pupper.Kinematics import four_legs_inverse_kinematics
 from MangDang.mini_pupper.display import Display
-from src.MovementScheme import MovementScheme
 from src.Command import Command
 from src.MovementGroup import MovementGroups
 
@@ -72,11 +71,11 @@ def main(use_imu=False):
             else:
                 command_mapping[user_command]()
                 print(f"Executing action: {user_command}")
-        else:
-            time.sleep(0.1)  # Small delay to prevent CPU overutilization
 
         # Step the controller forward by dt
-        controller.run(state, command, disp)
+        if movement_groups.MovementLib:
+            movement = movement_groups.MovementLib.pop(0)
+            state.joint_angles = controller.run(state, movement, disp)
 
         # Update the pwm widths going to the servos
         hardware_interface.set_actuator_postions(state.joint_angles)
@@ -87,15 +86,15 @@ command_queue = []
 movement_groups = MovementGroups()
 
 command_mapping = {
-    "w": lambda: movement_groups.move_forward(),
-    "s": lambda: movement_groups.move_backward(),
+    "w": movement_groups.move_forward,
+    "s": movement_groups.move_backward,
     "a": lambda: movement_groups.rotate(10),
     "d": lambda: movement_groups.rotate(-10),
-    "look up": lambda: movement_groups.look_up(),
-    "look down": lambda: movement_groups.look_down(),
-    "look right": lambda: movement_groups.look_right(),
-    "look left": lambda: movement_groups.look_left(),
-    "exit": lambda: movement_groups.stop()
+    "look up": movement_groups.look_up,
+    "look down": movement_groups.look_down,
+    "look right": movement_groups.look_right,
+    "look left": movement_groups.look_left,
+    "exit": movement_groups.stop
 }
 
 main()
